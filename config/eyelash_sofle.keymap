@@ -70,32 +70,45 @@
     combos {
         compatible = "zmk,combos";
 
-        win_ctrl+alt {
-            bindings = <&kp LA(LCTRL)>;
-            key-positions = <57 26>;
-            layers = <1 5 6>;
-        };
-
         mac_cmd-alt-esc {
             bindings = <&kp LG(LA(ESC))>;
             key-positions = <57 56 0>;
             layers = <0>;
         };
 
-        win_ctrl+gui {
-            bindings = <&kp LC(LEFT_GUI)>;
-            key-positions = <57 56>;
-            layers = <1 5 6>;
-        };
-
-        win_alt+gui {
-            bindings = <&kp LA(LEFT_GUI)>;
-            key-positions = <56 26>;
-        };
-
         win_ctrl+backspace {
             bindings = <&delete_line>;
             key-positions = <57 25>;
+        };
+
+        win_ctrl+left {
+            bindings = <&kp HOME>;
+            key-positions = <34 61 57>;
+        };
+
+        win_ctrl+right {
+            bindings = <&kp END>;
+            key-positions = <57 61 36>;
+        };
+
+        win_alt+left {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <34 26 61>;
+        };
+
+        win_alt+right {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <26 61 36>;
+        };
+
+        win_alt+up {
+            bindings = <&kp LC(UP)>;
+            key-positions = <26 61 22>;
+        };
+
+        win_alt+down {
+            bindings = <&kp LC(DOWN)>;
+            key-positions = <26 35 61>;
         };
     };
 
