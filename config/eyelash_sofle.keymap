@@ -97,13 +97,13 @@
         };
 
         win_ctrl+left {
-            bindings = <&kp HOME>;
+            bindings = <&kp LA(LEFT)>;
             key-positions = <34 61 57>;
             layers = <1>;
         };
 
         win_ctrl+right {
-            bindings = <&kp END>;
+            bindings = <&kp LA(RIGHT)>;
             key-positions = <57 61 36>;
             layers = <1>;
         };
@@ -135,6 +135,18 @@
         win_ctrl+delete_forward {
             bindings = <&delete_forward_line>;
             key-positions = <57 61 25>;
+            layers = <1>;
+        };
+
+        win_ctrl+up {
+            bindings = <&kp LA(UP)>;
+            key-positions = <57 61 22>;
+            layers = <1>;
+        };
+
+        win_ctrl+down {
+            bindings = <&kp LA(DOWN)>;
+            key-positions = <57 61 35>;
             layers = <1>;
         };
     };
