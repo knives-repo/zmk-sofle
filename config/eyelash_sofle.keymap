@@ -56,14 +56,30 @@
     keymap {
         compatible = "zmk,keymap";
 
-        MAC-03 {
+        MAC-00 {
             bindings = <
-&to 0   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&gresc        &kp N1  &kp N2  &kp N3  &kp N4     &kp N5              &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9            &kp N0             &kp MINUS
+&kp TAB       &kp Q   &kp W   &kp E   &kp R      &kp T               &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O             &kp P              &kp EQUAL
+&kp LEFT_ALT  &kp A   &kp S   &kp D   &kp F      &kp G               &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp APOS
+&kp LSHFT     &kp Z   &kp X   &kp C   &kp V      &kp B               &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH           &kp BACKSPACE
+&kp C_MUTE    &trans  &trans  &mo 1   &kp LCTRL  &kp LEFT_COMMAND    &kp ENTER        &kp SPACE  &kp ENTER  &mo 8      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            display-name = "MAC-00";
+        };
+
+        MAC-01 {
+            bindings = <
+&kp GRAVE  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &mmv MOVE_UP     &kp F6     &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
+&trans     &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans   &trans
+&trans     &trans  &trans     &trans     &trans     &trans    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &trans
+&trans     &trans  &trans     &trans     &trans     &trans    &mmv MOVE_RIGHT  &trans     &trans    &trans    &trans     &trans   &trans
+&kp F15    &trans  &trans     &trans     &trans     &trans    &mkp LCLK        &trans     &trans    &trans    &trans     &trans
+            >;
+
+            display-name = "MAC-01";
+            sensor-bindings = <&scroll_encoder>;
         };
 
         MAC-02 {
@@ -78,52 +94,14 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        MAC-00 {
+        MAC-03 {
             bindings = <
-&gresc        &kp N1  &kp N2  &kp N3  &kp N4     &kp N5              &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9            &kp N0             &kp MINUS
-&kp TAB       &kp Q   &kp W   &kp E   &kp R      &kp T               &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O             &kp P              &kp EQUAL
-&kp LEFT_ALT  &kp A   &kp S   &kp D   &kp F      &kp G               &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp APOS
-&kp LSHFT     &kp Z   &kp X   &kp C   &kp V      &kp B               &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH           &kp BACKSPACE
-&kp C_MUTE    &trans  &trans  &mo 3   &kp LCTRL  &kp LEFT_COMMAND    &kp ENTER        &kp SPACE  &kp ENTER  &mo 1      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "MAC-00";
-        };
-
-        MAC-01 {
-            bindings = <
-&kp GRAVE  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5      &mmv MOVE_UP     &kp F6     &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
-&trans     &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans   &trans
-&trans     &trans  &trans     &trans     &trans     &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &trans
-&trans     &trans  &trans     &trans     &trans     &trans      &mmv MOVE_RIGHT  &trans     &trans    &trans    &trans     &trans   &trans
-&kp F15    &trans  &trans     &trans     &trans     &trans      &mkp LCLK        &trans     &trans    &trans    &trans     &trans
-            >;
-
-            display-name = "MAC-01";
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        WIN-03 {
-            bindings = <
-&to 2   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&to 4   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
-        };
-
-        WIN-02 {
-            bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &kp F11
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &trans      &trans     &trans       &trans
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &trans       &trans
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
 
         WIN-00 {
@@ -133,7 +111,7 @@
 &kp TAB     &kp Q   &kp W   &kp E   &kp R      &kp T     &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
 &mo 9       &kp A   &kp S   &kp D   &kp F      &kp G     &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
 &kp LSHFT   &kp Z   &kp X   &kp C   &kp V      &kp B     &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-&kp C_MUTE  &trans  &trans  &mo 7   &kp LCTRL  &mo 9     &kp ENTER        &kp SPACE  &kp ENTER  &mo 5      &trans   &trans
+&kp C_MUTE  &trans  &trans  &mo 5   &kp LCTRL  &mo 9     &kp ENTER        &kp SPACE  &kp ENTER  &mo 9      &trans   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -152,6 +130,28 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
+        WIN-02 {
+            bindings = <
+&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &kp F11
+&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &trans      &trans     &trans       &trans
+&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &trans       &trans
+&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
+&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        WIN-03 {
+            bindings = <
+&to 0   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
         WIN-CTRL {
             display-name = "WIN-CTRL";
             bindings = <
@@ -159,7 +159,7 @@
 &kp LC(TAB)   &kp LC(Q)   &kp LC(W)   &kp LC(E)   &kp LC(R)   &kp LC(T)     &kp DOWN_ARROW   &kp LC(Y)      &kp LC(U)      &kp LC(I)      &kp LC(O)    &kp LC(P)     &delete_line
 &kp LEFT_ALT  &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)     &kp LEFT_ARROW   &kp LC(H)      &kp LC(J)      &kp LC(K)      &kp LC(L)    &kp LC(SEMI)  &kp LC(APOS)
 &kp LSHIFT    &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)     &kp RIGHT_ARROW  &kp LC(N)      &kp LC(M)      &kp LC(COMMA)  &kp LC(DOT)  &kp LC(FSLH)  &kp RSHIFT
-&kp C_MUTE    &trans      &trans      &trans      &trans      &trans        &kp ENTER        &kp LC(SPACE)  &kp LC(ENTER)  &mo 1          &trans       &trans
+&kp C_MUTE    &trans      &trans      &trans      &trans      &trans        &kp ENTER        &kp LC(SPACE)  &kp LC(ENTER)  &mo 8          &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -172,7 +172,7 @@
 &kp TAB       &kp LS(LC(Q))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))     &kp DOWN_ARROW   &kp LS(LC(Y))      &kp LS(LC(U))   &kp LS(LC(I))      &kp LS(LC(O))    &kp LS(LC(P))     &kp LS(LC(BSPC))
 &kp LEFT_ALT  &kp LS(LC(A))   &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))     &kp LEFT_ARROW   &kp LS(LC(H))      &kp LS(LC(J))   &kp LS(LC(K))      &kp LS(LC(L))    &kp LS(LC(SEMI))  &kp LS(LC(SQT))
 &kp LSHFT     &kp LS(LC(Z))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &kp LS(LC(B))     &kp RIGHT_ARROW  &kp LS(LC(N))      &kp LS(LC(M))   &kp LS(LC(COMMA))  &kp LS(LC(DOT))  &kp LS(LC(FSLH))  &kp RSHIFT
-&kp C_MUTE    &trans          &trans          &mo 3           &kp LCTRL       &mo 9             &kp ENTER        &kp SPACE          &kp ENTER       &mo 1              &trans           &trans
+&kp C_MUTE    &trans          &trans          &mo 1           &kp LCTRL       &mo 9             &kp ENTER        &kp SPACE          &kp ENTER       &mo 8              &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -183,13 +183,13 @@
         compatible = "zmk,conditional-layers";
 
         MAC-03 {
-            if-layers = <3 1>;
-            then-layer = <0>;
+            if-layers = <1 8>;
+            then-layer = <4>;
         };
 
         WIN-03 {
-            if-layers = <7 5>;
-            then-layer = <4>;
+            if-layers = <5 9>;
+            then-layer = <9>;
         };
     };
 };
