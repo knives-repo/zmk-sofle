@@ -153,6 +153,7 @@
         win-ctrl+space {
             bindings = <&kp LA(SPACE)>;
             key-positions = <57 59>;
+            layers = <1>;
         };
     };
 
