@@ -71,11 +71,11 @@
 
         MAC-01 {
             bindings = <
-&kp GRAVE  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &mmv MOVE_UP     &kp F6     &kp F7    &kp F8    &kp F9     &kp F10        &kp F11
-&trans     &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans         &trans
-&trans     &trans  &trans     &trans     &trans     &trans    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans         &trans
-&trans     &trans  &trans     &trans     &trans     &trans    &mmv MOVE_RIGHT  &trans     &trans    &trans    &trans     &kp BACKSLASH  &trans
-&kp F15    &trans  &trans     &trans     &trans     &trans    &mkp LCLK        &trans     &trans    &trans    &trans     &trans
+&kp GRAVE  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &mmv MOVE_UP     &kp F6     &kp F7      &kp F8            &kp F9      &kp F10        &kp F11
+&trans     &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME    &kp UP            &kp END     &trans         &kp DELETE
+&trans     &trans  &trans     &trans     &trans     &trans    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans         &trans
+&trans     &trans  &trans     &trans     &trans     &trans    &mmv MOVE_RIGHT  &trans     &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &kp BACKSLASH  &trans
+&kp F15    &trans  &trans     &trans     &trans     &trans    &mkp LCLK        &trans     &trans      &trans            &trans      &trans
             >;
 
             display-name = "MAC-01";
@@ -84,10 +84,10 @@
 
         MAC-02 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &trans  &trans  &trans   &trans
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans  &trans  &trans   &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans   &trans
+&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans        &trans          &trans        &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans  &trans
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans  &trans  &trans
             >;
 
@@ -97,11 +97,11 @@
 
         MAC-03 {
             bindings = <
-&to 4   &trans  &trans  &trans  &trans      &trans         &trans  &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &sys_reset  &bootloader    &trans  &soft_off  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans     &trans  &trans  &trans  &trans
+&to 4   &trans  &trans  &trans  &trans      &trans         &trans  &trans     &kp K_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans     &trans          &trans            &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans     &trans          &trans            &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &sys_reset  &bootloader    &trans  &soft_off  &trans          &trans            &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans     &trans          &trans            &trans      &trans
             >;
 
             label = "MAC-03";
@@ -124,7 +124,7 @@
             display-name = "WIN-01";
             bindings = <
 &kp GRAVE      &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &mmv MOVE_UP     &kp F6     &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
-&trans         &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans   &trans
+&trans         &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans   &kp DELETE
 &trans         &trans  &trans     &trans     &trans     &trans    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &trans
 &trans         &trans  &trans     &trans     &trans     &trans    &mmv MOVE_RIGHT  &trans     &trans    &trans    &trans     &trans   &trans
 &kp LG(LC(V))  &trans  &trans     &trans     &trans     &trans    &mkp LCLK        &trans     &trans    &trans    &trans     &trans
@@ -135,11 +135,11 @@
 
         WIN-02 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &kp F11
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &trans      &trans     &trans       &trans
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &trans       &trans
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans        &trans          &trans        &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -195,6 +195,16 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+        };
+
+        layer_11 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 
