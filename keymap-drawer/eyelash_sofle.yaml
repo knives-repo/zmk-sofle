@@ -603,3 +603,5 @@ combos:
   k: Ctl+$$mdi:arrow-up-bold$$
 - p: [26, 35, 61]
   k: Ctl+$$mdi:arrow-down-bold$$
+- p: [57, 61, 25]
+  k: '&delete_forward_line'
