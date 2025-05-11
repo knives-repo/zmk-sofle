@@ -240,7 +240,7 @@
 
         Layer-3 {
             if-layers = <3 6>;
-            then-layer = <10>;
+            then-layer = <9>;
         };
 
         ctrl-layer {
@@ -255,12 +255,12 @@
 
         alt-layer {
             if-layers = <3 5>;
-            then-layer = <9>;
+            then-layer = <8>;
         };
 
         alt-layer-2 {
             if-layers = <6 5>;
-            then-layer = <9>;
+            then-layer = <8>;
         };
     };
 };
