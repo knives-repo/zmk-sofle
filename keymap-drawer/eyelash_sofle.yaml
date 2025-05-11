@@ -591,17 +591,25 @@ combos:
   l: [MAC]
 - p: [57, 25]
   k: '&delete_line'
+  l: [WIN]
 - p: [34, 61, 57]
   k: HOME
+  l: [WIN]
 - p: [57, 61, 36]
   k: END
+  l: [WIN]
 - p: [34, 26, 61]
   k: Ctl+$$mdi:arrow-left-bold$$
+  l: [WIN]
 - p: [26, 61, 36]
   k: Ctl+$$mdi:arrow-right-bold$$
+  l: [WIN]
 - p: [26, 61, 22]
   k: Ctl+$$mdi:arrow-up-bold$$
+  l: [WIN]
 - p: [26, 35, 61]
   k: Ctl+$$mdi:arrow-down-bold$$
+  l: [WIN]
 - p: [57, 61, 25]
   k: '&delete_forward_line'
+  l: [WIN]
