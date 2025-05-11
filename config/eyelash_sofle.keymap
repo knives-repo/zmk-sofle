@@ -102,18 +102,6 @@
             key-positions = <57 56 0>;
             layers = <0>;
         };
-
-        win_ctrl+down {
-            bindings = <&kp LA(DOWN)>;
-            key-positions = <57 61 35>;
-            layers = <1>;
-        };
-
-        win-ctrl+space {
-            bindings = <&kp LA(SPACE)>;
-            key-positions = <57 59>;
-            layers = <1>;
-        };
     };
 
     keymap {
