@@ -132,9 +132,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   MAC-02:
   - '~'
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - '&bt_mac'
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - '&bt_win'
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
