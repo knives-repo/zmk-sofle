@@ -26,7 +26,7 @@ layers:
   - I
   - O
   - P
-  - {t: '=', s: +}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-option$$
   - A
   - S
@@ -52,7 +52,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '=', s: +}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -116,7 +116,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - F15
   - {t: '$$mdi:transfer$$', type: trans}
@@ -287,7 +287,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - WIN-CTRL-SHIFT
+  - {t: '$$mdi:apple-keyboard-option$$', h: ALT}
   - A
   - S
   - D
@@ -317,14 +317,14 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - WIN-01
-  - $$mdi:apple-keyboard-control$$
-  - CTRL
+  - $$mdi:apple-keyboard-command$$
+  - {t: '$$mdi:apple-keyboard-control$$', h: CTRL}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - WIN-02
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   WIN-01:
   - {t: '`', s: '~'}
   - F1
@@ -521,7 +521,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   CTRL:
-  - {t: '$$mdi:keyboard-esc$$', s: '`'}
+  - Ctl+$$mdi:keyboard-esc$$
   - {t: Ctl+1, s: Ctl+!}
   - {t: Ctl+2, s: Ctl+@}
   - {t: Ctl+3, s: Ctl+#}
@@ -553,7 +553,7 @@ layers:
   - Ctl+D
   - Ctl+F
   - Ctl+G
-  - $$mdi:arrow-left-bold$$
+  - HOME
   - Ctl+H
   - Ctl+J
   - Ctl+K
@@ -566,19 +566,84 @@ layers:
   - Ctl+C
   - Ctl+V
   - Ctl+B
-  - $$mdi:arrow-right-bold$$
+  - END
   - Ctl+N
   - Ctl+M
   - {t: 'Ctl+,', s: Ctl+<}
   - {t: Ctl+., s: Ctl+>}
   - {t: Ctl+/, s: 'Ctl+?'}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: Ctl+=, s: Ctl++}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - Ctl+$$mdi:keyboard-space$$
+  - {t: 'Ctl+$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  ALT:
+  - Alt+$$mdi:keyboard-esc$$
+  - {t: Alt+1, s: Alt+!}
+  - {t: Alt+2, s: Alt+@}
+  - {t: Alt+3, s: Alt+#}
+  - {t: Alt+4, s: Alt+$}
+  - {t: Alt+5, s: Alt+%}
+  - $$mdi:arrow-up-bold$$
+  - {t: Alt+6, s: Alt+^}
+  - {t: Alt+7, s: Alt+&}
+  - {t: Alt+8, s: Alt+*}
+  - {t: Alt+9, s: Alt+(}
+  - {t: Alt+0, s: Alt+)}
+  - {t: Alt+-, s: Alt+_}
+  - Alt+$$mdi:keyboard-tab$$
+  - Alt+Q
+  - Alt+W
+  - Alt+E
+  - Alt+R
+  - Alt+T
+  - $$mdi:arrow-down-bold$$
+  - Alt+Y
+  - Alt+U
+  - Alt+I
+  - Alt+O
+  - Alt+P
+  - {t: 'Alt+$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:apple-keyboard-option$$', type: held}
+  - Alt+A
+  - Alt+S
+  - Alt+D
+  - Alt+F
+  - Alt+G
+  - $$mdi:arrow-left-bold$$
+  - Alt+H
+  - Alt+J
+  - Alt+K
+  - Alt+L
+  - {t: Alt+;, s: 'Alt+:'}
+  - {t: Alt+', s: Alt+"}
+  - $$mdi:apple-keyboard-shift$$
+  - Alt+Z
+  - Alt+X
+  - Alt+C
+  - Alt+V
+  - Alt+B
+  - $$mdi:arrow-right-bold$$
+  - Alt+N
+  - Alt+M
+  - {t: 'Alt+,', s: Alt+<}
+  - {t: Alt+., s: Alt+>}
+  - {t: Alt+/, s: 'Alt+?'}
+  - {t: Alt+=, s: Alt++}
+  - $$mdi:volume-off$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - Ctl+$$mdi:keyboard-space$$
   - {t: 'Ctl+$$mdi:keyboard-return$$', type: enter}
@@ -612,7 +677,7 @@ layers:
   - Sft+Ctl+O
   - Sft+Ctl+P
   - {t: 'Sft+Ctl+$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:apple-keyboard-option$$', type: held}
+  - $$mdi:apple-keyboard-option$$
   - Sft+Ctl+A
   - Sft+Ctl+S
   - Sft+Ctl+D
