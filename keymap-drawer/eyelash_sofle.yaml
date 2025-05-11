@@ -424,3 +424,5 @@ combos:
 - p: [57, 61, 35]
   k: Alt+$$mdi:arrow-down-bold$$
   l: [WIN]
+- p: [57, 59]
+  k: Alt+$$mdi:keyboard-space$$
