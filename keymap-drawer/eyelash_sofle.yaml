@@ -58,7 +58,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - MAC-01
   - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-command$$
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
