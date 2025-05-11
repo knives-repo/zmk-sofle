@@ -256,22 +256,22 @@
         };
 
         ctrl-layer {
-            if-layers = <8 3>;
+            if-layers = <3 8>;
             then-layer = <6>;
         };
 
         ctrl-layer-2 {
-            if-layers = <8 4>;
+            if-layers = <4 8>;
             then-layer = <6>;
         };
 
         alt-layer {
-            if-layers = <9 3>;
+            if-layers = <3 9>;
             then-layer = <5>;
         };
 
         alt-layer-2 {
-            if-layers = <9 4>;
+            if-layers = <4 9>;
             then-layer = <5>;
         };
     };
