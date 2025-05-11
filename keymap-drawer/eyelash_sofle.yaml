@@ -426,3 +426,4 @@ combos:
   l: [WIN]
 - p: [57, 59]
   k: Alt+$$mdi:keyboard-space$$
+  l: [WIN]
