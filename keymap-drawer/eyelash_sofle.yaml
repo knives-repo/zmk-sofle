@@ -92,7 +92,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:apple-keyboard-option$$', h: L-ALT}
+  - L-ALT
   - A
   - S
   - D
