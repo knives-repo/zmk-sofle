@@ -93,41 +93,49 @@
         win_ctrl+backspace {
             bindings = <&delete_line>;
             key-positions = <57 25>;
+            layers = <1>;
         };
 
         win_ctrl+left {
             bindings = <&kp HOME>;
             key-positions = <34 61 57>;
+            layers = <1>;
         };
 
         win_ctrl+right {
             bindings = <&kp END>;
             key-positions = <57 61 36>;
+            layers = <1>;
         };
 
         win_alt+left {
             bindings = <&kp LC(LEFT)>;
             key-positions = <34 26 61>;
+            layers = <1>;
         };
 
         win_alt+right {
             bindings = <&kp LC(RIGHT)>;
             key-positions = <26 61 36>;
+            layers = <1>;
         };
 
         win_alt+up {
             bindings = <&kp LC(UP)>;
             key-positions = <26 61 22>;
+            layers = <1>;
         };
 
         win_alt+down {
             bindings = <&kp LC(DOWN)>;
             key-positions = <26 35 61>;
+            layers = <1>;
         };
 
         win_ctrl+delete_forward {
             bindings = <&delete_forward_line>;
             key-positions = <57 61 25>;
+            layers = <1>;
         };
     };
 
