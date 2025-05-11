@@ -166,7 +166,7 @@
 &kp TAB       &kp Q   &kp W   &kp E   &kp R      &kp T                     &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O             &kp P              &kp BACKSPACE
 &kp LEFT_ALT  &kp A   &kp S   &kp D   &kp F      &kp G                     &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp APOS
 &kp LSHFT     &kp Z   &kp X   &kp C   &kp V      &kp B                     &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH           &kp EQUAL
-&kp C_MUTE    &trans  &trans  &mo 2   &kp LCTRL  &mt LEFT_COMMAND SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 3      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp C_MUTE    &trans  &mo 2   &mo 3   &kp LCTRL  &mt LEFT_COMMAND SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 4      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -180,10 +180,22 @@
 &kp TAB       &kp Q   &kp W   &kp E   &kp R         &kp T              &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O             &kp P              &kp BACKSPACE
 &kp LEFT_ALT  &kp A   &kp S   &kp D   &kp F         &kp G              &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp APOS
 &kp LSHFT     &kp Z   &kp X   &kp C   &kp V         &kp B              &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH           &kp EQUAL
-&kp C_MUTE    &trans  &trans  &mo 2   &kp LEFT_GUI  &mt LCTRL SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 3      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp C_MUTE    &trans  &trans  &mo 3   &kp LEFT_GUI  &mt LCTRL SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 4      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+        };
+
+        Special {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "SP";
         };
 
         Layer-01 {
@@ -229,8 +241,8 @@
         compatible = "zmk,conditional-layers";
 
         L-3 {
-            if-layers = <2 3>;
-            then-layer = <4>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 };
