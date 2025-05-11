@@ -65,6 +65,20 @@
             bindings = <&bt BT_SEL 2 &to 1>;
             label = "BT_WIN";
         };
+
+        delete_forward_line: delete_forward_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LS(END)>,
+                <&macro_tap>,
+                <&kp BACKSPACE>,
+                <&macro_release>,
+                <&kp LS(END)>;
+
+            label = "DELETE_FORWARD_LINE";
+        };
     };
 
     combos {
@@ -109,6 +123,11 @@
         win_alt+down {
             bindings = <&kp LC(DOWN)>;
             key-positions = <26 35 61>;
+        };
+
+        win_ctrl+delete_forward {
+            bindings = <&delete_forward_line>;
+            key-positions = <57 61 25>;
         };
     };
 
