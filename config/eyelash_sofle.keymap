@@ -35,18 +35,19 @@
     };
 
     behaviors {
-         tog_on: toggle_layer_on_only {
-                    compatible = "zmk,behavior-toggle-layer";
-                    #binding-cells = <1>;
-                    display-name = "Toggle Layer On";
-                    toggle-mode = "on";
-                };
-         tog_off: toggle_layer_off_only {
-                    compatible = "zmk,behavior-toggle-layer";
-                    #binding-cells = <1>;
-                    display-name = "Toggle Layer Off";
-                    toggle-mode = "off";
-                };
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
     };
 
     macros {
@@ -67,14 +68,14 @@
         bt_mac: bt_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &tog 1>;
+            bindings = <&bt BT_SEL 0 &tog_off 1>;
             label = "BT_MAC";
         };
 
         bt_win: bt_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &tog 1>;
+            bindings = <&bt BT_SEL 2 &tog_on 1>;
             label = "BT_WIN";
         };
 
@@ -271,7 +272,7 @@
 
         alt-layer-2 {
             if-layers = <9 4>;
-            then-layer = <9>;
+            then-layer = <5>;
         };
     };
 };
