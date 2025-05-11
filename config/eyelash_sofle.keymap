@@ -227,7 +227,7 @@
 &kp LC(TAB)   &kp LC(Q)   &kp LC(W)   &kp LC(E)   &kp LC(R)   &kp LC(T)     &kp DOWN_ARROW  &kp LC(Y)      &kp LC(U)      &kp LC(I)      &kp LC(O)     &kp LC(P)      &delete_line
 &kp LEFT_ALT  &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)     &kp HOME        &kp LC(H)      &kp LC(J)      &kp LC(K)      &kp LC(L)     &kp LC(SEMI)   &kp LC(APOS)
 &kp LSHIFT    &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)     &kp END         &kp LC(N)      &kp LC(M)      &kp LC(COMMA)  &kp LC(DOT)   &kp LC(FSLH)   &kp LC(EQUAL)
-&kp C_MUTE    &trans      &trans      &trans      &trans      &trans        &kp ENTER       &kp LA(SPACE)  &kp LC(ENTER)  &trans         &kp LA(LEFT)  &kp LA(RIGHT)
+&kp C_MUTE    &trans      &trans      &mo 3       &trans      &trans        &kp ENTER       &kp LA(SPACE)  &kp LC(ENTER)  &mo 4          &kp LA(LEFT)  &kp LA(RIGHT)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -240,7 +240,7 @@
 &kp LA(TAB)   &kp LA(Q)   &kp LA(W)   &kp LA(E)   &kp LA(R)   &kp LA(T)     &kp DOWN_ARROW   &kp LA(Y)      &kp LA(U)      &kp LA(I)      &kp LA(O)             &kp LA(P)              &kp LA(BACKSPACE)
 &kp LEFT_ALT  &kp LA(A)   &kp LA(S)   &kp LA(D)   &kp LA(F)   &kp LA(G)     &kp LEFT_ARROW   &kp LA(H)      &kp LA(J)      &kp LA(K)      &kp LA(L)             &kp LA(SEMI)           &kp LA(APOS)
 &kp LSHIFT    &kp LA(Z)   &kp LA(X)   &kp LA(C)   &kp LA(V)   &kp LA(B)     &kp RIGHT_ARROW  &kp LA(N)      &kp LA(M)      &kp LA(COMMA)  &kp LA(DOT)           &kp LA(FSLH)           &kp LA(EQUAL)
-&kp C_MUTE    &trans      &trans      &trans      &trans      &kp LCTRL     &kp ENTER        &kp LC(SPACE)  &kp LA(ENTER)  &trans         &kp LA(LEFT_BRACKET)  &kp LA(RIGHT_BRACKET)
+&kp C_MUTE    &trans      &trans      &mo 3       &trans      &kp LCTRL     &kp ENTER        &kp LC(SPACE)  &kp LA(ENTER)  &mo 4          &kp LA(LEFT_BRACKET)  &kp LA(RIGHT_BRACKET)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
