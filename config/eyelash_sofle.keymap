@@ -112,7 +112,7 @@
 &kp TAB       &kp Q   &kp W   &kp E   &kp R      &kp T                     &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O             &kp P              &kp BACKSPACE
 &kp LEFT_ALT  &kp A   &kp S   &kp D   &kp F      &kp G                     &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp APOS
 &kp LSHFT     &kp Z   &kp X   &kp C   &kp V      &kp B                     &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH           &kp EQUAL
-&kp C_MUTE    &trans  &mo 4   &mo 5   &kp LCTRL  &mt LEFT_COMMAND SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 8      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp C_MUTE    &trans  &mo 4   &mo 5   &kp LCTRL  &mt LEFT_COMMAND SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 6      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -126,7 +126,7 @@
 &kp TAB         &kp Q   &kp W   &kp E   &kp R         &kp T          &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O             &kp P              &kp BACKSPACE
 &lt 3 LEFT_ALT  &kp A   &kp S   &kp D   &kp F         &kp G          &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp APOS
 &kp LSHFT       &kp Z   &kp X   &kp C   &kp V         &kp B          &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH           &kp EQUAL
-&kp C_MUTE      &trans  &mo 4   &mo 5   &kp LEFT_GUI  &lt 2 SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 8      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp C_MUTE      &trans  &mo 4   &mo 5   &kp LEFT_GUI  &lt 2 SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 6      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -184,30 +184,6 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        Layer-04 {
-            bindings = <
-&trans         &kp LC(F1)  &kp LC(F2)  &kp LC(F3)  &kp LC(F4)  &kp LC(F5)    &trans  &kp LC(F6)  &kp LC(F7)  &kp LC(F8)    &kp LC(F9)            &kp LC(F10)            &kp LC(F11)
-&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans      &kp LC(HOME)  &trans                &trans                 &delete_forward_line
-&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &kp HOME    &kp LC(END)   &kp END               &trans                 &trans
-&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans      &trans        &trans                &trans                 &trans
-&kp LG(LC(V))  &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans      &trans        &kp LC(LEFT_BRACKET)  &kp LC(RIGHT_BRACKET)
-            >;
-
-            label = "L-4";
-        };
-
-        Layer-05 {
-            bindings = <
-&trans  &kp LA(F1)  &kp LA(F2)  &kp LA(F3)  &kp LA(F4)  &kp LA(F5)    &trans  &kp LA(F6)  &kp LA(F7)    &kp LA(F8)    &kp LA(F9)     &kp LA(F10)  &kp LA(F11)
-&trans  &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans        &kp LC(UP)    &trans         &trans       &kp LC(DELETE)
-&trans  &trans      &trans      &trans      &trans      &trans        &trans  &trans      &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans       &trans
-&trans  &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans        &trans        &trans         &trans       &trans
-&trans  &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans        &trans        &trans         &trans
-            >;
-
-            label = "L-5";
-        };
-
         Layer-02 {
             bindings = <
 &kp TILDE  &bt_mac       &bt BT_SEL 1  &bt_win  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &trans  &trans  &trans  &trans  &trans  &trans
@@ -219,6 +195,30 @@
 
             sensor-bindings = <&scroll_encoder>;
             label = "L-2";
+        };
+
+        Layer-05_alt {
+            bindings = <
+&kp LA(GRAVE)  &kp LA(F1)  &kp LA(F2)  &kp LA(F3)  &kp LA(F4)  &kp LA(F5)    &trans  &kp LA(F6)  &kp LA(F7)    &kp LA(F8)    &kp LA(F9)     &kp LA(F10)  &kp LA(F11)
+&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans        &kp LC(UP)    &trans         &trans       &kp LC(DELETE)
+&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans       &trans
+&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans        &trans        &trans         &trans       &trans
+&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans        &trans        &trans         &trans
+            >;
+
+            label = "L-5";
+        };
+
+        Layer-04_ctrl {
+            bindings = <
+&kp LC(GRAVE)  &kp LC(F1)  &kp LC(F2)  &kp LC(F3)  &kp LC(F4)  &kp LC(F5)    &trans  &kp LC(F6)  &kp LC(F7)  &kp LC(F8)    &kp LC(F9)            &kp LC(F10)            &kp LC(F11)
+&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans      &kp LC(HOME)  &trans                &trans                 &delete_forward_line
+&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &kp HOME    &kp LC(END)   &kp END               &trans                 &trans
+&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans      &trans        &trans                &trans                 &trans
+&kp LG(LC(V))  &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans      &trans        &kp LC(LEFT_BRACKET)  &kp LC(RIGHT_BRACKET)
+            >;
+
+            label = "L-4";
         };
 
         Layer-03 {
@@ -238,18 +238,23 @@
         compatible = "zmk,conditional-layers";
 
         Layer-3 {
-            if-layers = <5 8>;
-            then-layer = <5>;
+            if-layers = <5 6>;
+            then-layer = <9>;
         };
 
         ctrl-layer {
             if-layers = <2 5>;
-            then-layer = <6>;
+            then-layer = <8>;
         };
 
         ctrl-layer-2 {
-            if-layers = <2 8>;
-            then-layer = <6>;
+            if-layers = <2 6>;
+            then-layer = <8>;
+        };
+
+        alt-layer {
+            if-layers = <3 5>;
+            then-layer = <7>;
         };
     };
 };
