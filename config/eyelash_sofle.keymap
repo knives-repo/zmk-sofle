@@ -205,55 +205,6 @@
 
             label = "L-3";
         };
-
-        WIN-CTRL {
-            display-name = "L-CTRL";
-            bindings = <
-&kp LC(ESC)   &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)    &kp UP_ARROW    &kp LC(N6)     &kp LC(N7)     &kp LC(N8)     &kp LC(N9)   &kp LC(N0)    &kp LC(MINUS)
-&kp LC(TAB)   &kp LC(Q)   &kp LC(W)   &kp LC(E)   &kp LC(R)   &kp LC(T)     &kp DOWN_ARROW  &kp LC(Y)      &kp LC(U)      &kp LC(I)      &kp LC(O)    &kp LC(P)     &delete_line
-&kp LEFT_ALT  &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)     &kp HOME        &kp LC(H)      &kp LC(J)      &kp LC(K)      &kp LC(L)    &kp LC(SEMI)  &kp LC(APOS)
-&kp LSHIFT    &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)     &kp END         &kp LC(N)      &kp LC(M)      &kp LC(COMMA)  &kp LC(DOT)  &kp LC(FSLH)  &kp LC(EQUAL)
-&kp C_MUTE    &trans      &trans      &trans      &trans      &trans        &kp ENTER       &kp LA(SPACE)  &kp LC(ENTER)  &trans         &trans       &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-        };
-
-        WIN-ALT {
-            display-name = "L-ALT";
-            bindings = <
-&kp LA(ESC)   &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)    &kp UP_ARROW     &kp LA(N6)     &kp LA(N7)     &kp LA(N8)     &kp LA(N9)   &kp LA(N0)    &kp LA(MINUS)
-&kp LA(TAB)   &kp LA(Q)   &kp LA(W)   &kp LA(E)   &kp LA(R)   &kp LA(T)     &kp DOWN_ARROW   &kp LA(Y)      &kp LA(U)      &kp LA(I)      &kp LA(O)    &kp LA(P)     &kp LA(BACKSPACE)
-&kp LEFT_ALT  &kp LA(A)   &kp LA(S)   &kp LA(D)   &kp LA(F)   &kp LA(G)     &kp LEFT_ARROW   &kp LA(H)      &kp LA(J)      &kp LA(K)      &kp LA(L)    &kp LA(SEMI)  &kp LA(APOS)
-&kp LSHIFT    &kp LA(Z)   &kp LA(X)   &kp LA(C)   &kp LA(V)   &kp LA(B)     &kp RIGHT_ARROW  &kp LA(N)      &kp LA(M)      &kp LA(COMMA)  &kp LA(DOT)  &kp LA(FSLH)  &kp LA(EQUAL)
-&kp C_MUTE    &trans      &trans      &trans      &trans      &trans        &kp ENTER        &kp LC(SPACE)  &kp LA(ENTER)  &trans         &trans       &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-        };
-
-        layer_9 {
-            display-name = "WIN-CTRL-SHIFT";
-            bindings = <
-&gresc        &kp LS(LC(N1))  &kp LS(LC(AT))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LS(LC(N5))    &kp UP_ARROW     &kp LS(LC(CARET))  &kp LS(LC(N7))  &kp LS(LC(N8))     &kp LS(LC(N9))   &kp LS(LC(N0))    &kp LS(LC(MINUS))
-&kp TAB       &kp LS(LC(Q))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))     &kp DOWN_ARROW   &kp LS(LC(Y))      &kp LS(LC(U))   &kp LS(LC(I))      &kp LS(LC(O))    &kp LS(LC(P))     &kp LS(LC(BSPC))
-&kp LEFT_ALT  &kp LS(LC(A))   &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))     &kp LEFT_ARROW   &kp LS(LC(H))      &kp LS(LC(J))   &kp LS(LC(K))      &kp LS(LC(L))    &kp LS(LC(SEMI))  &kp LS(LC(SQT))
-&kp LSHFT     &kp LS(LC(Z))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &kp LS(LC(B))     &kp RIGHT_ARROW  &kp LS(LC(N))      &kp LS(LC(M))   &kp LS(LC(COMMA))  &kp LS(LC(DOT))  &kp LS(LC(FSLH))  &kp RSHIFT
-&kp C_MUTE    &trans          &trans          &trans          &kp LCTRL       &mo 7             &kp ENTER        &kp SPACE          &kp ENTER       &trans             &trans           &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-        };
-
-        layer_11 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
     };
 
     conditional_layers {
