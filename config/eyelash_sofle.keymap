@@ -51,6 +51,20 @@
 
             label = "DELETE_LINE";
         };
+
+        bt_mac: bt_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "BT_MAC";
+        };
+
+        bt_win: bt_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &to 4>;
+            label = "BT_WIN";
+        };
     };
 
     keymap {
