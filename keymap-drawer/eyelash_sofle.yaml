@@ -586,16 +586,20 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [57, 26]
-  k: Alt+$$mdi:apple-keyboard-control$$
-  l: [WIN, L-CTRL, L-ALT]
 - p: [57, 56, 0]
   k: Gui+Alt+$$mdi:keyboard-esc$$
   l: [MAC]
-- p: [57, 56]
-  k: Ctl+$$mdi:apple-keyboard-command$$
-  l: [WIN, L-CTRL, L-ALT]
-- p: [56, 26]
-  k: Alt+$$mdi:apple-keyboard-command$$
 - p: [57, 25]
   k: '&delete_line'
+- p: [34, 61, 57]
+  k: HOME
+- p: [57, 61, 36]
+  k: END
+- p: [34, 26, 61]
+  k: Ctl+$$mdi:arrow-left-bold$$
+- p: [26, 61, 36]
+  k: Ctl+$$mdi:arrow-right-bold$$
+- p: [26, 61, 22]
+  k: Ctl+$$mdi:arrow-up-bold$$
+- p: [26, 35, 61]
+  k: Ctl+$$mdi:arrow-down-bold$$
