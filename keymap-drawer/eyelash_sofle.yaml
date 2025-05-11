@@ -333,10 +333,10 @@ combos:
   k: '&delete_line'
   l: [WIN]
 - p: [34, 61, 57]
-  k: HOME
+  k: Alt+$$mdi:arrow-left-bold$$
   l: [WIN]
 - p: [57, 61, 36]
-  k: END
+  k: Alt+$$mdi:arrow-right-bold$$
   l: [WIN]
 - p: [34, 26, 61]
   k: Ctl+$$mdi:arrow-left-bold$$
@@ -352,4 +352,10 @@ combos:
   l: [WIN]
 - p: [57, 61, 25]
   k: '&delete_forward_line'
+  l: [WIN]
+- p: [57, 61, 22]
+  k: Alt+$$mdi:arrow-up-bold$$
+  l: [WIN]
+- p: [57, 61, 35]
+  k: Alt+$$mdi:arrow-down-bold$$
   l: [WIN]

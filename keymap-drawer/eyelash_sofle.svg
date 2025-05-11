@@ -1010,14 +1010,14 @@ rect.held, rect.combo.held {
 <path d="M578,233 l76,21" class="combo"/>
 <path d="M578,233 l-171,55" class="combo"/>
 <rect rx="6" ry="6" x="564" y="220" width="28" height="26" class="combo"/>
-<text x="578" y="233" class="combo tap">HOME</text>
+<use href="#mdi:arrow-left-bold" xlink:href="#mdi:arrow-left-bold" x="569" y="224" height="18" width="18.0" class="combo tap glyph mdi:arrow-left-bold"/>
 </g>
 <g class="combo combopos-2">
 <path d="M615,233 l-208,56" class="combo"/>
 <path d="M615,233 l40,18" class="combo"/>
 <path d="M615,233 l152,-78" class="combo"/>
 <rect rx="6" ry="6" x="601" y="220" width="28" height="26" class="combo"/>
-<text x="615" y="233" class="combo tap">END</text>
+<use href="#mdi:arrow-right-bold" xlink:href="#mdi:arrow-right-bold" x="606" y="224" height="18" width="18.0" class="combo tap glyph mdi:arrow-right-bold"/>
 </g>
 <g class="combo combopos-3">
 <path d="M457,191 l196,-41" class="combo"/>
@@ -1052,6 +1052,20 @@ rect.held, rect.combo.held {
 <path d="M652,222 l227,-102" class="combo"/>
 <rect rx="6" ry="6" x="638" y="209" width="28" height="26" class="combo"/>
 <text x="652" y="222" class="combo tap"><tspan style="font-size: 60%">&amp;delete_f…</tspan></text>
+</g>
+<g class="combo combopos-8">
+<path d="M596,212 l-190,75" class="combo"/>
+<path d="M596,212 l60,37" class="combo"/>
+<path d="M596,212 l118,-115" class="combo"/>
+<rect rx="6" ry="6" x="582" y="199" width="28" height="26" class="combo"/>
+<use href="#mdi:arrow-up-bold" xlink:href="#mdi:arrow-up-bold" x="587" y="203" height="18" width="18.0" class="combo tap glyph mdi:arrow-up-bold"/>
+</g>
+<g class="combo combopos-9">
+<path d="M596,231 l-189,58" class="combo"/>
+<path d="M596,231 l58,22" class="combo"/>
+<path d="M596,231 l116,-80" class="combo"/>
+<rect rx="6" ry="6" x="582" y="218" width="28" height="26" class="combo"/>
+<use href="#mdi:arrow-down-bold" xlink:href="#mdi:arrow-down-bold" x="587" y="222" height="18" width="18.0" class="combo tap glyph mdi:arrow-down-bold"/>
 </g>
 </g>
 </g>
