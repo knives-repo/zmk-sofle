@@ -55,7 +55,7 @@ layers:
   - {t: '=', s: +}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - SP
+  - {t: '$$mdi:transfer$$', type: trans}
   - L-1
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
