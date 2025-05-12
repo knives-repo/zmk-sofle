@@ -60,7 +60,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - L-2
   - {t: '[', s: '{'}
