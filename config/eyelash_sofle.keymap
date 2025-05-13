@@ -102,6 +102,11 @@
             key-positions = <57 56 0>;
             layers = <0>;
         };
+
+        win_gui+ctrl+esc {
+            bindings = <&kp LC(LA(DEL))>;
+            key-positions = <56 57 0>;
+        };
     };
 
     keymap {
