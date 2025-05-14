@@ -192,11 +192,11 @@
 
         Layer-02 {
             bindings = <
-&kp TILDE  &bt_mac       &bt BT_SEL 1  &bt_win  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6         &kp F7      &kp F8            &kp F9      &kp F10        &kp F11
-&trans     &out OUT_TOG  &trans        &trans   &trans        &trans          &mmv MOVE_DOWN   &kp PAGE_UP    &kp HOME    &kp UP            &kp END     &trans         &kp DELETE
-&trans     &trans        &trans        &trans   &trans        &trans          &mmv MOVE_LEFT   &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans         &trans
-&trans     &trans        &trans        &trans   &trans        &trans          &mmv MOVE_RIGHT  &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp BACKSLASH  &trans
-&kp F15    &trans        &trans        &trans   &trans        &trans          &mkp LCLK        &trans         &trans      &trans            &trans      &trans
+&kp TILDE  &bt_mac       &bt BT_SEL 1  &bt_win    &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6         &kp F7      &kp F8            &kp F9      &kp F10        &kp F11
+&trans     &out OUT_TOG  &mkp LCLK     &mkp MCLK  &mkp RCLK     &trans          &mmv MOVE_DOWN   &kp PAGE_UP    &kp HOME    &kp UP            &kp END     &trans         &kp DELETE
+&trans     &trans        &trans        &trans     &trans        &trans          &mmv MOVE_LEFT   &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans         &trans
+&trans     &trans        &trans        &trans     &trans        &trans          &mmv MOVE_RIGHT  &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp BACKSLASH  &trans
+&kp F15    &trans        &trans        &trans     &trans        &trans          &mkp LCLK        &trans         &trans      &trans            &trans      &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
