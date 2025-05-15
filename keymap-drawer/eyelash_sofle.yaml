@@ -656,3 +656,4 @@ combos:
   l: [MAC]
 - p: [56, 57, 0]
   k: Ctl+Alt+$$mdi:backspace-reverse-outline$$
+  l: [WIN]
