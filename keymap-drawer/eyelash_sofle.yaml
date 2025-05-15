@@ -318,7 +318,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - L-1
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:apple-keyboard-control$$', type: held}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - Alt+$$mdi:keyboard-space$$
   - {t: 'Ctl+$$mdi:keyboard-return$$', type: enter}
