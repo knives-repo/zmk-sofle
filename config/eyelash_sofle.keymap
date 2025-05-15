@@ -172,7 +172,7 @@
 &kp LC(TAB)   &kp LC(Q)   &kp LC(W)   &kp LC(E)   &kp LC(R)   &kp LC(T)     &kp DOWN_ARROW  &kp LC(Y)      &kp LC(U)      &kp LC(I)      &kp LC(O)     &kp LC(P)      &delete_line
 &kp LEFT_ALT  &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)     &kp HOME        &kp LC(H)      &kp LC(J)      &kp LC(K)      &kp LC(L)     &kp LC(SEMI)   &kp LC(APOS)
 &kp LSHIFT    &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)     &kp END         &kp LC(N)      &kp LC(M)      &kp LC(COMMA)  &kp LC(DOT)   &kp LC(FSLH)   &kp LC(EQUAL)
-&kp C_MUTE    &trans      &trans      &mo 3       &trans      &trans        &kp ENTER       &kp LA(SPACE)  &kp LC(ENTER)  &mo 6          &kp LA(LEFT)  &kp LA(RIGHT)
+&kp C_MUTE    &trans      &trans      &mo 3       &trans      &kp LCTRL     &kp ENTER       &kp LA(SPACE)  &kp LC(ENTER)  &mo 6          &kp LA(LEFT)  &kp LA(RIGHT)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
