@@ -129,11 +129,11 @@
         WIN-00 {
             display-name = "WIN";
             bindings = <
-&gresc          &kp N1  &kp N2  &kp N3  &kp N4        &kp N5         &kp UP_ARROW     &kp N6       &kp N7       &kp N8     &kp N9            &kp N0             &kp MINUS
-&kp TAB         &kp Q   &kp W   &kp E   &kp R         &kp T          &kp DOWN_ARROW   &kp Y        &kp U        &kp I      &kp O             &kp P              &kp BACKSPACE
-&lt 5 LEFT_ALT  &kp A   &kp S   &kp D   &kp F         &kp G          &kp LEFT_ARROW   &kp H        &kp J        &kp K      &kp L             &kp SEMI           &kp APOS
-&kp LSHFT       &kp Z   &kp X   &kp C   &kp V         &kp B          &kp RIGHT_ARROW  &kp N        &kp M        &kp COMMA  &kp DOT           &kp FSLH           &kp EQUAL
-&kp C_MUTE      &trans  &trans  &mo 3   &kp LEFT_GUI  &lt 4 SPACE    &kp ENTER        &lt 4 SPACE  &lt 6 ENTER  &mo 6      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&gresc          &kp N1  &kp N2  &kp N3  &kp N4        &kp N5         &trans  &kp N6       &kp N7       &kp N8     &kp N9            &kp N0             &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E   &kp R         &kp T          &trans  &kp Y        &kp U        &kp I      &kp O             &kp P              &kp BACKSPACE
+&lt 5 LEFT_ALT  &kp A   &kp S   &kp D   &kp F         &kp G          &trans  &kp H        &kp J        &kp K      &kp L             &kp SEMI           &kp APOS
+&kp LSHFT       &kp Z   &kp X   &kp C   &kp V         &kp B          &trans  &kp N        &kp M        &kp COMMA  &kp DOT           &kp FSLH           &kp EQUAL
+&kp C_MUTE      &trans  &trans  &mo 3   &kp LEFT_GUI  &lt 4 SPACE    &trans  &lt 4 SPACE  &lt 6 ENTER  &mo 6      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
