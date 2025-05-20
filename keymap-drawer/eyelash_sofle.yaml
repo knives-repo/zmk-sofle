@@ -121,7 +121,7 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&Win_L1'
+  - L-W-1
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-control$$', s: 'Alt+$$mdi:keyboard-space$$'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -381,7 +381,7 @@ layers:
   - Ctl+Gui+V
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - L-1
+  - {t: L-1, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
