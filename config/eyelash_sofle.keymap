@@ -246,22 +246,6 @@
 
             label = "DELETE_FORWARD_LINE";
         };
-
-        Win_L1: Win_L1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&mo 5 &mo 3>;
-
-            label = "WIN_L1";
-        };
-
-        Win_L2: Win_L2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&mo 5 &mo 4>;
-
-            label = "WIN_L2";
-        };
     };
 
     combos {
@@ -299,11 +283,11 @@
         WIN-00 {
             display-name = "WIN";
             bindings = <
-&gresc        &kp N1  &kp N2  &kp N3   &kp N4        &kp N5                      &trans  &kp N6                    &kp N7                    &kp N8     &kp N9                 &kp N0                  &kp MINUS
-&kp TAB       &kp Q   &kp W   &kp E    &kp R         &kp T                       &trans  &kp Y                     &kp U                     &kp I      &kp O                  &kp P                   &win_ctrl_del
-&kp LEFT_ALT  &kp A   &kp S   &kp D    &kp F         &kp G                       &trans  &kp H                     &kp J                     &kp K      &kp L                  &kp SEMI                &kp APOS
-&kp LSHFT     &kp Z   &kp X   &kp C    &kp V         &kp B                       &trans  &kp N                     &kp M                     &kp COMMA  &kp DOT                &kp FSLH                &kp EQUAL
-&kp C_MUTE    &trans  &trans  &Win_L1  &kp LEFT_GUI  &win_mt_spacebar LCTRL 0    &trans  &win_mt_spacebar RCTRL 0  &lt_enter_win_l2 6 ENTER  &mo 6      &win_ctrl_leftbracket  &win_ctrl_rightbracket
+&gresc        &kp N1  &kp N2  &kp N3  &kp N4        &kp N5                      &trans  &kp N6                    &kp N7                    &kp N8     &kp N9                 &kp N0                  &kp MINUS
+&kp TAB       &kp Q   &kp W   &kp E   &kp R         &kp T                       &trans  &kp Y                     &kp U                     &kp I      &kp O                  &kp P                   &win_ctrl_del
+&kp LEFT_ALT  &kp A   &kp S   &kp D   &kp F         &kp G                       &trans  &kp H                     &kp J                     &kp K      &kp L                  &kp SEMI                &kp APOS
+&kp LSHFT     &kp Z   &kp X   &kp C   &kp V         &kp B                       &trans  &kp N                     &kp M                     &kp COMMA  &kp DOT                &kp FSLH                &kp EQUAL
+&kp C_MUTE    &trans  &trans  &mo 5   &kp LEFT_GUI  &win_mt_spacebar LCTRL 0    &trans  &win_mt_spacebar RCTRL 0  &lt_enter_win_l2 6 ENTER  &mo 6      &win_ctrl_leftbracket  &win_ctrl_rightbracket
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
