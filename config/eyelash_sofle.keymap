@@ -82,37 +82,37 @@
             flavor = "tap-preferred";
         };
 
-        ctrl_right: ctrl_right {
+        win_ctrl_right: win_ctrl_right {
             compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_RIGHT";
-            bindings = <&kp RIGHT>, <&kp END>;
+            label = "WIN_CTRL_RIGHT";
+            bindings = <&win_alt_right>, <&kp END>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
 
-        ctrl_left: ctrl_left {
+        win_ctrl_left: win_ctrl_left {
             compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_LEFT";
-            bindings = <&kp LEFT>, <&kp HOME>;
+            label = "WIN_CTRL_LEFT";
+            bindings = <&win_alt_left>, <&kp HOME>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
 
-        ctrl_up: ctrl_up {
+        win_ctrl_up: win_ctrl_up {
             compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_UP";
-            bindings = <&kp UP>, <&kp LC(HOME)>;
+            label = "WIN_CTRL_UP";
+            bindings = <&win_alt_up>, <&kp LC(HOME)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
 
-        ctrl_down: ctrl_down {
+        win_ctrl_down: win_ctrl_down {
             compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_DOWN";
-            bindings = <&kp DOWN>, <&kp LC(END)>;
+            label = "WIN_CTRL_DOWN";
+            bindings = <&win_alt_down>, <&kp LC(END)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -201,6 +201,42 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        win_alt_left: win_alt_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_ALT_LEFT";
+            bindings = <&kp LEFT>, <&kp LC(LEFT)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        win_alt_right: win_alt_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_ALT_RIGHT";
+            bindings = <&kp RIGHT>, <&kp LC(RIGHT)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        win_alt_up: win_alt_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_ALT_UP";
+            bindings = <&kp UP>, <&kp LC(UP)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        win_alt_down: win_alt_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_ALT_DOWN";
+            bindings = <&kp DOWN>, <&kp LC(DOWN)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
     };
 
@@ -334,11 +370,11 @@
 
         Layer-Win-01 {
             bindings = <
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans      &trans       &trans  &trans
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &ctrl_up    &trans       &trans  &win_ctrl_del_forward
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &ctrl_left  &ctrl_down  &ctrl_right  &trans  &trans
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans      &trans       &trans  &trans
-&kp LC(LG(V))  &trans  &trans  &mo 3   &trans  &trans    &trans  &trans  &trans      &trans      &trans       &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
+&kp LC(LG(V))  &trans  &trans  &mo 3   &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans
             >;
 
             label = "L-W-1";
@@ -348,11 +384,11 @@
         Layer-Win-02 {
             label = "L-W-2";
             bindings = <
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans      &trans       &trans  &trans
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &ctrl_up    &trans       &trans  &win_ctrl_del_forward
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &ctrl_left  &ctrl_down  &ctrl_right  &trans  &trans
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans      &trans       &trans  &trans
-&kp LC(LG(V))  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mo 4       &mo 4       &trans       &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
+&kp LC(LG(V))  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mo 4           &mo 4           &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
@@ -389,6 +425,11 @@
 
         Layer-3 {
             if-layers = <3 4>;
+            then-layer = <7>;
+        };
+
+        Layer-3-Win {
+            if-layers = <5 6>;
             then-layer = <7>;
         };
     };
