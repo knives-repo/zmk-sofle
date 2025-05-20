@@ -117,6 +117,91 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
+
+        lt_enter_win_l2: lt_enter_win_l2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_ENTER_WIN_L2";
+            bindings = <&Win_L2>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <25>;
+            flavor = "balanced";
+        };
+
+        win_ctrl_del: win_ctrl_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_CTRL_DEL";
+            bindings = <&win_alt_del>, <&delete_line>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        win_ctrl_del_forward: win_ctrl_del_forward {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_CTRL_DEL_FORWARD";
+            bindings = <&win_alt_del_forward>, <&delete_forward_line>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        win_alt_del: win_alt_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_ALT_DEL";
+            bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        win_alt_del_forward: win_alt_del_forward {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_ALT_DEL_FORWARD";
+            bindings = <&kp DELETE>, <&kp LC(DELETE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        win_ctrl_spacebar: win_ctrl_spacebar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_CTRL_SPACEBAR";
+            bindings = <&kp SPACE>, <&kp LA(SPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        win_mt_spacebar: win_mt_spacebar {
+            compatible = "zmk,behavior-hold-tap";
+            label = "WIN_MT_SPACEBAR";
+            bindings = <&kp>, <&win_ctrl_spacebar>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <25>;
+        };
+
+        win_ctrl_leftbracket: win_ctrl_leftbracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_CTRL_LEFTBRACKET";
+            bindings = <&kp LEFT_BRACKET>, <&kp LA(LEFT)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        win_ctrl_rightbracket: win_ctrl_rightbracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_CTRL_RIGHTBRACKET";
+            bindings = <&kp RIGHT_BRACKET>, <&kp LA(RIGHT)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
 
     macros {
@@ -161,6 +246,20 @@
 
             label = "DELETE_FORWARD_LINE";
         };
+
+        Win_L1: Win_L1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 5 &mo 3>;
+            label = "WIN_L1";
+        };
+
+        Win_L2: Win_L2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 5 &mo 4>;
+            label = "WIN_L2";
+        };
     };
 
     combos {
@@ -188,7 +287,7 @@
 &kp TAB       &kp Q   &kp W   &kp E   &kp R      &kp T                              &mmv MOVE_DOWN   &kp Y                             &kp U              &kp I      &kp O             &kp P              &kp BACKSPACE
 &kp LEFT_ALT  &kp A   &kp S   &kp D   &kp F      &kp G                              &mmv MOVE_LEFT   &kp H                             &kp J              &kp K      &kp L             &kp SEMI           &kp APOS
 &kp LSHFT     &kp Z   &kp X   &kp C   &kp V      &kp B                              &mmv MOVE_RIGHT  &kp N                             &kp M              &kp COMMA  &kp DOT           &kp FSLH           &kp EQUAL
-&kp C_MUTE    &mo 10  &trans  &mo 3   &kp LCTRL  &mt_spacebar LEFT_COMMAND SPACE    &mkp MB1         &mt_spacebar RIGHT_COMMAND SPACE  &lt_enter 6 ENTER  &mo 6      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp C_MUTE    &mo 7   &mo 2   &mo 3   &kp LCTRL  &mt_spacebar LEFT_COMMAND SPACE    &mkp MB1         &mt_spacebar RIGHT_COMMAND SPACE  &lt_enter 4 ENTER  &mo 4      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -198,11 +297,11 @@
         WIN-00 {
             display-name = "WIN";
             bindings = <
-&gresc          &kp N1  &kp N2  &kp N3  &kp N4        &kp N5                   &trans  &kp N6                 &kp N7             &kp N8     &kp N9            &kp N0             &kp MINUS
-&kp TAB         &kp Q   &kp W   &kp E   &kp R         &kp T                    &trans  &kp Y                  &kp U              &kp I      &kp O             &kp P              &kp BACKSPACE
-&lt 5 LEFT_ALT  &kp A   &kp S   &kp D   &kp F         &kp G                    &trans  &kp H                  &kp J              &kp K      &kp L             &kp SEMI           &kp APOS
-&kp LSHFT       &kp Z   &kp X   &kp C   &kp V         &kp B                    &trans  &kp N                  &kp M              &kp COMMA  &kp DOT           &kp FSLH           &kp EQUAL
-&kp C_MUTE      &trans  &trans  &mo 3   &kp LEFT_GUI  &lt_mod_space 4 SPACE    &trans  &lt_mod_space 4 SPACE  &lt_enter 6 ENTER  &mo 6      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&gresc        &kp N1  &kp N2  &kp N3   &kp N4        &kp N5                      &trans  &kp N6                    &kp N7                    &kp N8     &kp N9                 &kp N0                  &kp MINUS
+&kp TAB       &kp Q   &kp W   &kp E    &kp R         &kp T                       &trans  &kp Y                     &kp U                     &kp I      &kp O                  &kp P                   &win_ctrl_del
+&kp LEFT_ALT  &kp A   &kp S   &kp D    &kp F         &kp G                       &trans  &kp H                     &kp J                     &kp K      &kp L                  &kp SEMI                &kp APOS
+&kp LSHFT     &kp Z   &kp X   &kp C    &kp V         &kp B                       &trans  &kp N                     &kp M                     &kp COMMA  &kp DOT                &kp FSLH                &kp EQUAL
+&kp C_MUTE    &trans  &trans  &Win_L1  &kp LEFT_GUI  &win_mt_spacebar LCTRL 0    &trans  &win_mt_spacebar RCTRL 0  &lt_enter_win_l2 0 ENTER  &trans     &win_ctrl_leftbracket  &win_ctrl_rightbracket
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -223,78 +322,41 @@
 
         Layer-01 {
             bindings = <
-&kp GRAVE  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &mmv MOVE_UP     &kp F6     &kp F7      &kp F8            &kp F9      &kp F10        &kp F11
-&trans     &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME    &kp UP            &kp END     &trans         &kp DELETE
-&trans     &trans  &trans     &trans     &trans     &trans    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans         &trans
-&trans     &trans  &trans     &trans     &trans     &trans    &mmv MOVE_RIGHT  &trans     &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp BACKSLASH  &trans
-&kp F15    &trans  &trans     &trans     &trans     &trans    &mkp RCLK        &trans     &trans      &trans            &trans      &trans
+&kp GRAVE  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &mmv MOVE_Y(-100)  &kp F6     &kp F7      &kp F8            &kp F9      &kp F10        &kp F11
+&trans     &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &mmv MOVE_Y(100)   &kp PG_UP  &kp HOME    &kp UP            &kp END     &trans         &kp DELETE
+&trans     &trans  &trans     &trans     &trans     &trans    &mmv MOVE_X(-100)  &kp PG_DN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans         &trans
+&trans     &trans  &trans     &trans     &trans     &trans    &mmv MOVE_X(100)   &trans     &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp BACKSLASH  &trans
+&kp F15    &trans  &trans     &trans     &trans     &trans    &mkp RCLK          &trans     &trans      &trans            &trans      &trans
             >;
 
             display-name = "L-1";
-            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
-        };
-
-        WIN-CTRL {
-            display-name = "L-CTRL";
-            bindings = <
-&kp LC(ESC)   &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)    &kp UP_ARROW    &kp LC(N6)     &kp LC(N7)     &kp LC(N8)     &kp LC(N9)    &kp LC(N0)     &kp LC(MINUS)
-&kp LC(TAB)   &kp LC(Q)   &kp LC(W)   &kp LC(E)   &kp LC(R)   &kp LC(T)     &kp DOWN_ARROW  &kp LC(Y)      &kp LC(U)      &kp LC(I)      &kp LC(O)     &kp LC(P)      &delete_line
-&kp LEFT_ALT  &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)     &kp HOME        &kp LC(H)      &kp LC(J)      &kp LC(K)      &kp LC(L)     &kp LC(SEMI)   &kp LC(APOS)
-&kp LSHIFT    &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)     &kp END         &kp LC(N)      &kp LC(M)      &kp LC(COMMA)  &kp LC(DOT)   &kp LC(FSLH)   &kp LC(EQUAL)
-&kp C_MUTE    &trans      &trans      &mo 3       &trans      &kp LCTRL     &kp ENTER       &kp LA(SPACE)  &kp LC(ENTER)  &mo 6          &kp LA(LEFT)  &kp LA(RIGHT)
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-        };
-
-        WIN-ALT {
-            display-name = "L-ALT";
-            bindings = <
-&kp LA(ESC)   &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)    &kp UP_ARROW     &kp LA(N6)     &kp LA(N7)     &kp LA(N8)     &kp LA(N9)            &kp LA(N0)             &kp LA(MINUS)
-&kp LA(TAB)   &kp LA(Q)   &kp LA(W)   &kp LA(E)   &kp LA(R)   &kp LA(T)     &kp DOWN_ARROW   &kp LA(Y)      &kp LA(U)      &kp LA(I)      &kp LA(O)             &kp LA(P)              &kp LA(BACKSPACE)
-&kp LEFT_ALT  &kp LA(A)   &kp LA(S)   &kp LA(D)   &kp LA(F)   &kp LA(G)     &kp LEFT_ARROW   &kp LA(H)      &kp LA(J)      &kp LA(K)      &kp LA(L)             &kp LA(SEMI)           &kp LA(APOS)
-&kp LSHIFT    &kp LA(Z)   &kp LA(X)   &kp LA(C)   &kp LA(V)   &kp LA(B)     &kp RIGHT_ARROW  &kp LA(N)      &kp LA(M)      &kp LA(COMMA)  &kp LA(DOT)           &kp LA(FSLH)           &kp LA(EQUAL)
-&kp C_MUTE    &trans      &trans      &mo 3       &trans      &kp LCTRL     &kp ENTER        &kp LC(SPACE)  &kp LA(ENTER)  &mo 6          &kp LA(LEFT_BRACKET)  &kp LA(RIGHT_BRACKET)
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         Layer-02 {
             bindings = <
-&kp TILDE  &bt_mac       &bt BT_SEL 1  &bt_win    &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6         &kp F7      &kp F8            &kp F9      &kp F10        &kp F11
-&trans     &out OUT_TOG  &mkp LCLK     &mkp MCLK  &mkp RCLK     &trans          &mmv MOVE_DOWN   &kp PAGE_UP    &kp HOME    &kp UP            &kp END     &trans         &kp DELETE
-&trans     &trans        &trans        &trans     &trans        &trans          &mmv MOVE_LEFT   &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans         &trans
-&trans     &trans        &trans        &trans     &trans        &trans          &mmv MOVE_RIGHT  &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp BACKSLASH  &trans
-&kp F15    &trans        &trans        &trans     &trans        &trans          &mkp RCLK        &trans         &trans      &trans            &trans      &trans
+&kp TILDE  &bt_mac       &bt BT_SEL 1  &bt_win    &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_Y(-100)  &kp F6         &kp F7      &kp F8            &kp F9      &kp F10        &kp F11
+&trans     &out OUT_TOG  &mkp LCLK     &mkp MCLK  &mkp RCLK     &trans          &mmv MOVE_Y(100)   &kp PAGE_UP    &kp HOME    &kp UP            &kp END     &trans         &kp DELETE
+&trans     &trans        &trans        &trans     &trans        &trans          &mmv MOVE_X(-100)  &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans         &trans
+&trans     &trans        &trans        &trans     &trans        &trans          &mmv MOVE_X(100)   &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp BACKSLASH  &trans
+&kp F15    &trans        &trans        &trans     &trans        &trans          &mkp RCLK          &trans         &trans      &trans            &trans      &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
             label = "L-2";
         };
 
-        Layer-04_ctrl {
+        Layer-Win {
             bindings = <
-&kp LC(GRAVE)  &kp LC(F1)  &kp LC(F2)  &kp LC(F3)  &kp LC(F4)  &kp LC(F5)    &trans  &kp LC(F6)  &kp LC(F7)  &kp LC(F8)    &kp LC(F9)            &kp LC(F10)            &kp LC(F11)
-&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans      &kp LC(HOME)  &trans                &trans                 &delete_forward_line
-&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &kp HOME    &kp LC(END)   &kp END               &trans                 &trans
-&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans      &trans        &trans                &trans                 &trans
-&kp LG(LC(V))  &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans      &trans        &kp LC(LEFT_BRACKET)  &kp LC(RIGHT_BRACKET)
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans      &trans       &trans  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &ctrl_up    &trans       &trans  &win_ctrl_del_forward
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &ctrl_left  &ctrl_down  &ctrl_right  &trans  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans      &trans       &trans  &trans
+&kp LC(LG(V))  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans      &trans       &trans
             >;
 
-            label = "L-4";
-        };
-
-        Layer-05_alt {
-            bindings = <
-&kp LA(GRAVE)  &kp LA(F1)  &kp LA(F2)  &kp LA(F3)  &kp LA(F4)  &kp LA(F5)    &trans  &kp LA(F6)  &kp LA(F7)    &kp LA(F8)    &kp LA(F9)     &kp LA(F10)  &kp LA(F11)
-&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans        &kp LC(UP)    &trans         &trans       &kp LC(DELETE)
-&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans       &trans
-&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans        &trans        &trans         &trans       &trans
-&trans         &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans        &trans        &trans         &trans
-            >;
-
-            label = "L-5";
+            label = "L-W";
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         Layer-03 {
@@ -307,6 +369,7 @@
             >;
 
             label = "L-3";
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         NUMPAD {
@@ -326,28 +389,8 @@
         compatible = "zmk,conditional-layers";
 
         Layer-3 {
-            if-layers = <3 6>;
-            then-layer = <9>;
-        };
-
-        ctrl-layer {
             if-layers = <3 4>;
-            then-layer = <7>;
-        };
-
-        ctrl-layer-2 {
-            if-layers = <6 4>;
-            then-layer = <7>;
-        };
-
-        alt-layer {
-            if-layers = <3 5>;
-            then-layer = <8>;
-        };
-
-        alt-layer-2 {
-            if-layers = <6 5>;
-            then-layer = <8>;
+            then-layer = <6>;
         };
     };
 };
