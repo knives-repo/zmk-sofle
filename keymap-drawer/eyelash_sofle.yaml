@@ -55,7 +55,7 @@ layers:
   - {t: '=', s: +}
   - $$mdi:volume-off$$
   - NUM
-  - {t: '$$mdi:transfer$$', type: trans}
+  - SP
   - L-1
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
@@ -91,8 +91,8 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:apple-keyboard-option$$', h: L-ALT}
+  - {t: '$$mdi:backspace$$', s: '&delete_line'}
+  - $$mdi:apple-keyboard-option$$
   - A
   - S
   - D
@@ -121,15 +121,15 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - L-1
+  - '&Win_L1'
   - $$mdi:apple-keyboard-command$$
-  - {t: '$$mdi:keyboard-space$$', h: L-CTRL}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-control$$', s: 'Alt+$$mdi:keyboard-space$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-space$$', h: L-CTRL}
-  - {t: '$$mdi:keyboard-return$$', h: L-2}
-  - L-2
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-control$$', s: 'Alt+$$mdi:keyboard-space$$'}
+  - {t: '$$mdi:keyboard-return$$', h: '&Win_L2'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', s: 'Alt+$$mdi:arrow-left-bold$$'}
+  - {t: ']', s: 'Alt+$$mdi:arrow-right-bold$$'}
   SP:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -185,7 +185,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -202,7 +202,7 @@ layers:
   - F3
   - F4
   - F5
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - '&mmv MOVE_Y(-100)'
   - F6
   - F7
   - F8
@@ -215,7 +215,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - '&mmv MOVE_Y(100)'
   - PG UP
   - HOME
   - $$mdi:arrow-up-bold$$
@@ -228,7 +228,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - '&mmv MOVE_X(-100)'
   - PG DN
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -241,7 +241,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - '&mmv MOVE_X(100)'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - PLAY PAUSE
@@ -260,136 +260,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  L-CTRL:
-  - Ctl+$$mdi:keyboard-esc$$
-  - {t: Ctl+1, s: Ctl+!}
-  - {t: Ctl+2, s: Ctl+@}
-  - {t: Ctl+3, s: Ctl+#}
-  - {t: Ctl+4, s: Ctl+$}
-  - {t: Ctl+5, s: Ctl+%}
-  - $$mdi:arrow-up-bold$$
-  - {t: Ctl+6, s: Ctl+^}
-  - {t: Ctl+7, s: Ctl+&}
-  - {t: Ctl+8, s: Ctl+*}
-  - {t: Ctl+9, s: Ctl+(}
-  - {t: Ctl+0, s: Ctl+)}
-  - {t: Ctl+-, s: Ctl+_}
-  - Ctl+$$mdi:keyboard-tab$$
-  - Ctl+Q
-  - Ctl+W
-  - Ctl+E
-  - Ctl+R
-  - Ctl+T
-  - $$mdi:arrow-down-bold$$
-  - Ctl+Y
-  - Ctl+U
-  - Ctl+I
-  - Ctl+O
-  - Ctl+P
-  - '&delete_line'
-  - $$mdi:apple-keyboard-option$$
-  - Ctl+A
-  - Ctl+S
-  - Ctl+D
-  - Ctl+F
-  - Ctl+G
-  - HOME
-  - Ctl+H
-  - Ctl+J
-  - Ctl+K
-  - Ctl+L
-  - {t: Ctl+;, s: 'Ctl+:'}
-  - {t: Ctl+', s: Ctl+"}
-  - $$mdi:apple-keyboard-shift$$
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - Ctl+B
-  - END
-  - Ctl+N
-  - Ctl+M
-  - {t: 'Ctl+,', s: Ctl+<}
-  - {t: Ctl+., s: Ctl+>}
-  - {t: Ctl+/, s: 'Ctl+?'}
-  - {t: Ctl+=, s: Ctl++}
-  - $$mdi:volume-off$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - L-1
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:apple-keyboard-control$$', type: held}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: 'Alt+$$mdi:keyboard-space$$', type: held alternate}
-  - {t: 'Ctl+$$mdi:keyboard-return$$', type: enter}
-  - L-2
-  - Alt+$$mdi:arrow-left-bold$$
-  - Alt+$$mdi:arrow-right-bold$$
-  L-ALT:
-  - Alt+$$mdi:keyboard-esc$$
-  - {t: Alt+1, s: Alt+!}
-  - {t: Alt+2, s: Alt+@}
-  - {t: Alt+3, s: Alt+#}
-  - {t: Alt+4, s: Alt+$}
-  - {t: Alt+5, s: Alt+%}
-  - $$mdi:arrow-up-bold$$
-  - {t: Alt+6, s: Alt+^}
-  - {t: Alt+7, s: Alt+&}
-  - {t: Alt+8, s: Alt+*}
-  - {t: Alt+9, s: Alt+(}
-  - {t: Alt+0, s: Alt+)}
-  - {t: Alt+-, s: Alt+_}
-  - Alt+$$mdi:keyboard-tab$$
-  - Alt+Q
-  - Alt+W
-  - Alt+E
-  - Alt+R
-  - Alt+T
-  - $$mdi:arrow-down-bold$$
-  - Alt+Y
-  - Alt+U
-  - Alt+I
-  - Alt+O
-  - Alt+P
-  - {t: 'Alt+$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:apple-keyboard-option$$', type: held}
-  - Alt+A
-  - Alt+S
-  - Alt+D
-  - Alt+F
-  - Alt+G
-  - $$mdi:arrow-left-bold$$
-  - Alt+H
-  - Alt+J
-  - Alt+K
-  - Alt+L
-  - {t: Alt+;, s: 'Alt+:'}
-  - {t: Alt+', s: Alt+"}
-  - $$mdi:apple-keyboard-shift$$
-  - Alt+Z
-  - Alt+X
-  - Alt+C
-  - Alt+V
-  - Alt+B
-  - $$mdi:arrow-right-bold$$
-  - Alt+N
-  - Alt+M
-  - {t: 'Alt+,', s: Alt+<}
-  - {t: Alt+., s: Alt+>}
-  - {t: Alt+/, s: 'Alt+?'}
-  - {t: Alt+=, s: Alt++}
-  - $$mdi:volume-off$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - L-1
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - Ctl+$$mdi:keyboard-space$$
-  - {t: 'Alt+$$mdi:keyboard-return$$', type: enter}
-  - L-2
-  - {t: 'Alt+[', s: 'Alt+{'}
-  - {t: 'Alt+]', s: 'Alt+}'}
   L-2:
   - '~'
   - '&bt_mac'
@@ -397,7 +267,7 @@ layers:
   - '&bt_win'
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - '&mmv MOVE_Y(-100)'
   - F6
   - F7
   - F8
@@ -410,20 +280,20 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - '&mmv MOVE_Y(100)'
   - PgUp
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mmv MOVE_X(-100)'
   - PgDn
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -436,7 +306,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - '&mmv MOVE_X(100)'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - PLAY PAUSE
@@ -448,27 +318,15 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-right-click-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {type: held alternate}
-  - {type: held}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  L-4:
-  - {t: Ctl+`, s: Ctl+~}
-  - Ctl+F1
-  - Ctl+F2
-  - Ctl+F3
-  - Ctl+F4
-  - Ctl+F5
+  L-W:
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+F6
-  - Ctl+F7
-  - Ctl+F8
-  - Ctl+F9
-  - Ctl+F10
-  - Ctl+F11
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -478,11 +336,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+HOME
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&delete_forward_line'
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -490,14 +345,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - HOME
-  - Ctl+END
-  - END
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:arrow-up-bold$$', s: Ctl+HOME}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace-reverse-outline$$', s: '&delete_forward_line'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -506,34 +360,17 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:arrow-left-bold$$', s: HOME}
+  - {t: '$$mdi:arrow-down-bold$$', s: Ctl+END}
+  - {t: '$$mdi:arrow-right-bold$$', s: END}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Gui+Ctl+V
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {type: held}
-  - {type: held}
-  - {t: 'Ctl+[', s: 'Ctl+{'}
-  - {t: 'Ctl+]', s: 'Ctl+}'}
-  L-5:
-  - {t: Alt+`, s: Alt+~}
-  - Alt+F1
-  - Alt+F2
-  - Alt+F3
-  - Alt+F4
-  - Alt+F5
   - {t: '$$mdi:transfer$$', type: trans}
-  - Alt+F6
-  - Alt+F7
-  - Alt+F8
-  - Alt+F9
-  - Alt+F10
-  - Alt+F11
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -541,48 +378,16 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+Gui+V
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+$$mdi:arrow-up-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+$$mdi:backspace-reverse-outline$$
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+$$mdi:arrow-left-bold$$
-  - Ctl+$$mdi:arrow-down-bold$$
-  - Ctl+$$mdi:arrow-right-bold$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {type: held}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   L-3:
@@ -612,7 +417,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -643,9 +448,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
