@@ -62,7 +62,7 @@ layers:
   - '&mkp MB1'
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-return$$', h: L-2}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:backspace-reverse-outline$$
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   WIN:
@@ -202,7 +202,7 @@ layers:
   - F3
   - F4
   - F5
-  - '&mmv MOVE_Y(-100)'
+  - $$mdi:pan-up$$
   - F6
   - F7
   - F8
@@ -215,7 +215,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mmv MOVE_Y(100)'
+  - $$mdi:pan-down$$
   - PG UP
   - HOME
   - $$mdi:arrow-up-bold$$
@@ -228,7 +228,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mmv MOVE_X(-100)'
+  - $$mdi:pan-left$$
   - PG DN
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -241,7 +241,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mmv MOVE_X(100)'
+  - $$mdi:pan-right$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - PLAY PAUSE
@@ -267,7 +267,7 @@ layers:
   - '&bt_win'
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - '&mmv MOVE_Y(-100)'
+  - $$mdi:pan-up$$
   - F6
   - F7
   - F8
@@ -280,7 +280,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mmv MOVE_Y(100)'
+  - $$mdi:pan-down$$
   - PgUp
   - HOME
   - $$mdi:arrow-up-bold$$
@@ -293,7 +293,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mmv MOVE_X(-100)'
+  - $$mdi:pan-left$$
   - PgDn
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -306,7 +306,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mmv MOVE_X(100)'
+  - $$mdi:pan-right$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - PLAY PAUSE
