@@ -339,7 +339,7 @@
             >;
 
             label = "SP";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         Layer-01 {
@@ -352,7 +352,7 @@
             >;
 
             display-name = "L-1";
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp LS(LA(C_VOLUME_UP)) LS(LA(C_VOLUME_DOWN))>;
         };
 
         Layer-02 {
@@ -364,7 +364,7 @@
 &kp F15    &trans        &trans        &trans     &trans        &trans          &mkp RCLK        &trans         &trans      &trans            &trans      &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp LS(LA(C_VOLUME_UP)) LS(LA(C_VOLUME_DOWN))>;
             label = "L-2";
         };
 
@@ -378,7 +378,7 @@
             >;
 
             label = "L-W-1";
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         Layer-Win-02 {
@@ -388,10 +388,10 @@
 &trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
 &trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
 &trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-&kp LC(LG(V))  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mo 4           &mo 4           &trans           &trans
+&kp LC(LG(V))  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mo 4           &trans          &trans           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         Layer-03 {
@@ -404,7 +404,7 @@
             >;
 
             label = "L-3";
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         NUMPAD {
