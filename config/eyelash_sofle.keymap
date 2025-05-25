@@ -303,11 +303,11 @@
 
         MAC-00 {
             bindings = <
-&gresc        &kp N1  &kp N2  &kp N3  &kp N4     &kp N5                             &mmv MOVE_UP     &kp N6                            &kp N7             &kp N8     &kp N9            &kp N0             &kp MINUS
-&kp TAB       &kp Q   &kp W   &kp E   &kp R      &kp T                              &mmv MOVE_DOWN   &kp Y                             &kp U              &kp I      &kp O             &kp P              &kp BACKSPACE
-&kp LEFT_ALT  &kp A   &kp S   &kp D   &kp F      &kp G                              &mmv MOVE_LEFT   &kp H                             &kp J              &kp K      &kp L             &kp SEMI           &kp APOS
-&kp LSHFT     &kp Z   &kp X   &kp C   &kp V      &kp B                              &mmv MOVE_RIGHT  &kp N                             &kp M              &kp COMMA  &kp DOT           &kp FSLH           &mt_spacebar RIGHT_SHIFT EQUAL
-&kp C_MUTE    &mo 8   &mo 2   &mo 3   &kp LCTRL  &mt_spacebar LEFT_COMMAND SPACE    &mkp MB1         &mt_spacebar RIGHT_COMMAND SPACE  &lt_enter 4 ENTER  &kp DEL    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&gresc        &kp N1  &kp N2  &kp N3  &kp N4     &kp N5                    &mmv MOVE_UP     &kp N6                            &kp N7             &kp N8     &kp N9            &kp N0             &kp MINUS
+&kp TAB       &kp Q   &kp W   &kp E   &kp R      &kp T                     &mmv MOVE_DOWN   &kp Y                             &kp U              &kp I      &kp O             &kp P              &kp BACKSPACE
+&kp LEFT_ALT  &kp A   &kp S   &kp D   &kp F      &kp G                     &mmv MOVE_LEFT   &kp H                             &kp J              &kp K      &kp L             &kp SEMI           &kp APOS
+&kp LSHFT     &kp Z   &kp X   &kp C   &kp V      &kp B                     &mmv MOVE_RIGHT  &kp N                             &kp M              &kp COMMA  &kp DOT           &kp FSLH           &mt_spacebar RIGHT_SHIFT EQUAL
+&kp C_MUTE    &mo 8   &mo 2   &mo 3   &kp LCTRL  &mt LEFT_COMMAND SPACE    &mkp MB1         &mt_spacebar RIGHT_COMMAND SPACE  &lt_enter 4 ENTER  &kp DEL    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
