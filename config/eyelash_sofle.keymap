@@ -280,6 +280,30 @@
 
             label = "DELETE_FORWARD_LINE";
         };
+
+        win_multi_layer_1: win_multi_layer_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 3 &mo 5>,
+                <&macro_pause_for_release>,
+                <&macro_release>;
+
+            label = "win_multi_layer_1";
+        };
+
+        win_multi_layer_2: win_multi_layer_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 4 &mo 6>,
+                <&macro_pause_for_release>,
+                <&macro_release>;
+
+            label = "WIN_MULTI_LAYER_2";
+        };
     };
 
     combos {
@@ -317,11 +341,11 @@
         WIN-00 {
             display-name = "WIN";
             bindings = <
-&gresc        &kp N1  &kp N2  &kp N3  &kp N4        &kp N5                      &trans  &kp N6                    &kp N7                    &kp N8      &kp N9                 &kp N0                  &kp MINUS
-&kp TAB       &kp Q   &kp W   &kp E   &kp R         &kp T                       &trans  &kp Y                     &kp U                     &kp I       &kp O                  &kp P                   &win_ctrl_del
-&kp LEFT_ALT  &kp A   &kp S   &kp D   &kp F         &kp G                       &trans  &kp H                     &kp J                     &kp K       &kp L                  &kp SEMI                &kp APOS
-&kp LSHFT     &kp Z   &kp X   &kp C   &kp V         &kp B                       &trans  &kp N                     &kp M                     &kp COMMA   &kp DOT                &kp FSLH                &trans
-&kp C_MUTE    &trans  &trans  &mo 5   &kp LEFT_GUI  &win_mt_spacebar LCTRL 0    &trans  &win_mt_spacebar RCTRL 0  &lt_enter_win_l2 6 ENTER  &kp DELETE  &win_ctrl_leftbracket  &win_ctrl_rightbracket
+&gresc        &kp N1  &kp N2  &kp N3              &kp N4        &kp N5                      &trans  &kp N6                    &kp N7                    &kp N8      &kp N9                 &kp N0                  &kp MINUS
+&kp TAB       &kp Q   &kp W   &kp E               &kp R         &kp T                       &trans  &kp Y                     &kp U                     &kp I       &kp O                  &kp P                   &win_ctrl_del
+&kp LEFT_ALT  &kp A   &kp S   &kp D               &kp F         &kp G                       &trans  &kp H                     &kp J                     &kp K       &kp L                  &kp SEMI                &kp APOS
+&kp LSHFT     &kp Z   &kp X   &kp C               &kp V         &kp B                       &trans  &kp N                     &kp M                     &kp COMMA   &kp DOT                &kp FSLH                &trans
+&kp C_MUTE    &trans  &trans  &win_multi_layer_1  &kp LEFT_GUI  &win_mt_spacebar LCTRL 0    &trans  &win_mt_spacebar RCTRL 0  &lt_enter_win_l2 6 ENTER  &kp DELETE  &win_ctrl_leftbracket  &win_ctrl_rightbracket
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -343,7 +367,7 @@
         Layer-01 {
             bindings = <
 &kp GRAVE  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &msc SCRL_UP     &kp F6     &kp F7      &kp F8            &kp F9      &kp F10        &kp F11
-&trans     &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &msc SCRL_DOWN   &kp PG_UP  &kp HOME    &kp UP            &kp END     &trans         &kp DELETE
+&trans     &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &msc SCRL_DOWN   &kp PG_UP  &trans      &kp UP            &trans      &trans         &kp DELETE
 &trans     &trans  &trans     &trans     &trans     &trans    &msc SCRL_RIGHT  &kp PG_DN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans         &trans
 &trans     &trans  &trans     &trans     &trans     &trans    &msc SCRL_LEFT   &trans     &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp BACKSLASH  &trans
 &kp F15    &trans  &trans     &trans     &trans     &trans    &mkp RCLK        &trans     &trans      &trans            &trans      &trans
@@ -356,7 +380,7 @@
         Layer-02 {
             bindings = <
 &kp TILDE  &bt_mac       &bt BT_SEL 1  &bt_win    &bt BT_SEL 3  &bt BT_SEL 4    &msc SCRL_UP     &kp F6         &kp F7      &kp F8            &kp F9      &kp F10        &kp F11
-&trans     &out OUT_TOG  &mkp LCLK     &mkp MCLK  &mkp RCLK     &trans          &msc SCRL_DOWN   &kp PAGE_UP    &kp HOME    &kp UP            &kp END     &trans         &kp DELETE
+&trans     &out OUT_TOG  &mkp LCLK     &mkp MCLK  &mkp RCLK     &trans          &msc SCRL_DOWN   &kp PAGE_UP    &trans      &kp UP            &trans      &trans         &kp DELETE
 &trans     &trans        &trans        &trans     &trans        &trans          &msc SCRL_RIGHT  &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans         &trans
 &trans     &trans        &trans        &trans     &trans        &trans          &msc SCRL_LEFT   &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp BACKSLASH  &trans
 &kp F15    &trans        &trans        &trans     &trans        &trans          &mkp RCLK        &trans         &trans      &trans            &trans      &trans
