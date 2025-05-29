@@ -119,7 +119,7 @@
         lt_enter_win_l2: lt_enter_win_l2 {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_ENTER_WIN_L2";
-            bindings = <&mo>, <&kp>;
+            bindings = <&win_multi_layer_2>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
