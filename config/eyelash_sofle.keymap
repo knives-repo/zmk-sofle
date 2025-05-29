@@ -235,17 +235,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
-
-        lt_enter_win_l1: lt_enter_win_l1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_ENTER_WIN_L1";
-            bindings = <&win_multi_layer_1>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <25>;
-            flavor = "balanced";
-        };
     };
 
     macros {
