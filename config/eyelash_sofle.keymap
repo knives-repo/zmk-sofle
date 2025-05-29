@@ -433,7 +433,7 @@
 &trans         &trans  &trans  &trans  &trans             &trans    &trans  &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
 &trans         &trans  &trans  &trans  &trans             &trans    &trans  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
 &trans         &trans  &trans  &trans  &kp LC(LA(LG(V)))  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-&kp LC(LG(V))  &trans  &trans  &trans  &trans             &trans    &trans  &trans  &mo 5           &trans          &trans           &trans
+&kp LC(LG(V))  &trans  &trans  &trans  &trans             &trans    &trans  &trans  &trans          &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -441,7 +441,7 @@
 
         Layer-03 {
             bindings = <
-&tog 1  &trans      &trans          &trans  &trans      &trans         &trans  &trans     &trans  &trans  &trans  &trans  &trans
+&tog 1  &trans      &trans          &trans  &trans      &trans         &trans  &trans     &trans  &trans  &trans  &trans  &tog 2
 &trans  &bt BT_CLR  &bt BT_CLR_ALL  &trans  &trans      &trans         &trans  &trans     &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &trans          &trans  &trans      &trans         &trans  &trans     &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &trans          &trans  &sys_reset  &bootloader    &trans  &soft_off  &trans  &trans  &trans  &trans  &trans
