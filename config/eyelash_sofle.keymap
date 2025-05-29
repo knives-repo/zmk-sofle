@@ -16,12 +16,11 @@
 &msc {
     acceleration-exponent = <1>;      // 0
     time-to-max-speed-ms = <100>;       // 300
-    delay-ms = <0>;                   // 0
+    delay-ms = <16>;                   // 0
     trigger-period-ms = <1>;
 };
 
-&mmv {
-};
+&mmv { trigger-period-ms = <16>; };
 
 / {
     scroll_encoder: scroll_encoder {
@@ -372,6 +371,7 @@
             >;
 
             label = "GAME";
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         Special {
