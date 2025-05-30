@@ -307,10 +307,64 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        mouse_morph_right: mouse_morph_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_MORPH_RIGHT";
+            bindings = <&mmv MOVE_X(200)>, <&mmv MOVE_X(600)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mouse_morph_down: mouse_morph_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_MORPH_DOWN";
+            bindings = <&mmv MOVE_Y(200)>, <&mmv MOVE_Y(600)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mouse_morph_up: mouse_morph_up{
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_MORPH_UP";
+            bindings = <&mmv MOVE_Y(-200)>, <&mmv MOVE_Y(-600)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         scroll_morph_right: scroll_morph_right {
             compatible = "zmk,behavior-mod-morph";
             label = "SCROLL_MORPH_RIGHT";
             bindings = <&msc MOVE_X(-10)>, <&msc MOVE_X(-20)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        scroll_morph_left: scroll_morph_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCROLL_MORPH_LEFT";
+            bindings = <&msc MOVE_X(10)>, <&msc MOVE_X(20)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        scroll_morph_up: scroll_morph_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCROLL_MORPH_UP";
+            bindings = <&msc MOVE_Y(10)>, <&msc MOVE_Y(20)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        scroll_morph_down: scroll_morph_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCROLL_MORPH_DOWN";
+            bindings = <&msc MOVE_Y(-10)>, <&msc MOVE_Y(-20)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
