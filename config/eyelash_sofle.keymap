@@ -498,11 +498,11 @@
 
         Special {
             bindings = <
-&trans  &trans  &trans  &gbp_pound  &EUR_euro  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &gbp_pound  &EUR_euro  &trans    &trans  &trans  &trans  &bullet_point  &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans     &trans    &trans  &trans  &trans  &trans         &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans     &trans    &trans  &trans  &trans  &trans         &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans     &trans    &trans  &trans  &trans  &trans         &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans     &trans    &trans  &trans  &trans  &trans         &trans  &trans
             >;
 
             label = "SP";
