@@ -7,7 +7,7 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - '&mmv MOVE_Y(-100)'
+  - '&mmv MOVE_Y(-200)'
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -20,7 +20,7 @@ layers:
   - E
   - R
   - T
-  - '&mmv MOVE_Y(100)'
+  - '&mmv MOVE_Y(200)'
   - Y
   - U
   - I
@@ -33,7 +33,7 @@ layers:
   - D
   - F
   - G
-  - '&mmv MOVE_X(-100)'
+  - '&mmv MOVE_X(-200)'
   - H
   - J
   - K
@@ -46,7 +46,7 @@ layers:
   - C
   - V
   - B
-  - '&mmv MOVE_X(100)'
+  - '&mmv MOVE_X(200)'
   - N
   - M
   - {t: ',', s: <}
@@ -267,7 +267,7 @@ layers:
   - F3
   - F4
   - F5
-  - $$mdi:pan-up$$
+  - '&msc MOVE_Y(-10)'
   - F6
   - F7
   - F8
@@ -280,7 +280,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:pan-down$$
+  - '&msc MOVE_Y(10)'
   - PG UP
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-up-bold$$
@@ -293,7 +293,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:pan-right$$
+  - '&msc MOVE_X(-10)'
   - PG DN
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -306,7 +306,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:pan-left$$
+  - '&msc MOVE_X(10)'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - PLAY PAUSE
