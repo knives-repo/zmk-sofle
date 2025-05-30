@@ -261,7 +261,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   L-1:
-  - {t: '`', s: '~'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
@@ -326,7 +326,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   L-2:
-  - '~'
+  - {t: '$$mdi:transfer$$', type: trans}
   - '&bt_mac'
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - '&bt_win'
