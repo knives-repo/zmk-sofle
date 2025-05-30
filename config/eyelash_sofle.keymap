@@ -169,10 +169,11 @@
         win_ctrl_spacebar: win_ctrl_spacebar {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_CTRL_SPACEBAR";
-            bindings = <&kp SPACE>, <&kp LA(SPACE)>;
+            bindings = <&win_alt_spacebar>, <&kp LA(SPACE)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_LALT)>;
         };
 
         win_mt_spacebar: win_mt_spacebar {
@@ -249,6 +250,15 @@
             tapping-term-ms = <200>;
             require-prior-idle-ms = <25>;
             flavor = "balanced";
+        };
+
+        win_alt_spacebar: win_alt_spacebar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_ALT_SPACEBAR";
+            bindings = <&kp SPACE>, <&kp LC(SPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
     };
 
