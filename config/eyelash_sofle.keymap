@@ -89,7 +89,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LALT)>;
         };
 
         win_ctrl_left: win_ctrl_left {
@@ -99,7 +98,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LALT)>;
         };
 
         win_ctrl_up: win_ctrl_up {
@@ -109,7 +107,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LALT)>;
         };
 
         win_ctrl_down: win_ctrl_down {
@@ -119,7 +116,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LALT)>;
         };
 
         lt_enter_win_l2: lt_enter_win_l2 {
@@ -279,7 +275,7 @@
             bindings = <&grave_escape_grave>, <&kp TILDE>;
 
             #binding-cells = <0>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
             mods = <(MOD_RSFT)>;
         };
 
@@ -289,7 +285,7 @@
             bindings = <&kp ESCAPE>, <&kp GRAVE>;
 
             #binding-cells = <0>;
-            keep-mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
             mods = <(MOD_LSFT)>;
         };
 
