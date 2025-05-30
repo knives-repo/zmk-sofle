@@ -7,7 +7,7 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - '&mmv MOVE_Y(-200)'
+  - '&double_tap_up'
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -20,7 +20,7 @@ layers:
   - E
   - R
   - T
-  - '&mmv MOVE_Y(200)'
+  - '&double_tap_down'
   - Y
   - U
   - I
@@ -33,7 +33,7 @@ layers:
   - D
   - F
   - G
-  - '&mmv MOVE_X(-200)'
+  - '&double_tap_left'
   - H
   - J
   - K
@@ -46,7 +46,7 @@ layers:
   - C
   - V
   - B
-  - '&mmv MOVE_X(200)'
+  - '&double_tap_right'
   - N
   - M
   - {t: ',', s: <}
@@ -267,7 +267,7 @@ layers:
   - F3
   - F4
   - F5
-  - '&msc MOVE_Y(-10)'
+  - '&double_scroll_up'
   - F6
   - F7
   - F8
@@ -280,7 +280,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&msc MOVE_Y(10)'
+  - '&double_scroll_down'
   - PG UP
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-up-bold$$
@@ -293,7 +293,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&msc MOVE_X(-10)'
+  - '&double_scroll_left'
   - PG DN
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -306,7 +306,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&msc MOVE_X(10)'
+  - '&double_scroll_right'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - PLAY PAUSE
@@ -332,7 +332,7 @@ layers:
   - '&bt_win'
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - $$mdi:pan-up$$
+  - '&double_scroll_up'
   - F6
   - F7
   - F8
@@ -345,7 +345,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:pan-down$$
+  - '&double_scroll_down'
   - PgUp
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-up-bold$$
@@ -358,7 +358,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:pan-right$$
+  - '&double_scroll_left'
   - PgDn
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -371,7 +371,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:pan-left$$
+  - '&double_scroll_right'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - PLAY PAUSE
