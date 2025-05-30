@@ -7,7 +7,7 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&mmv MOVE_Y(-200)', s: '&mmv MOVE_Y(-600)'}
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -20,7 +20,7 @@ layers:
   - E
   - R
   - T
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&mmv MOVE_Y(200)', s: '&mmv MOVE_Y(600)'}
   - Y
   - U
   - I
@@ -33,7 +33,7 @@ layers:
   - D
   - F
   - G
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&mmv MOVE_X(-200)', s: '&mmv MOVE_X(-600)'}
   - H
   - J
   - K
@@ -46,7 +46,7 @@ layers:
   - C
   - V
   - B
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&mmv MOVE_X(200)', s: '&mmv MOVE_X(600)'}
   - N
   - M
   - {t: ',', s: <}
@@ -267,7 +267,7 @@ layers:
   - F3
   - F4
   - F5
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&msc MOVE_Y(10)', s: '&msc MOVE_Y(20)'}
   - F6
   - F7
   - F8
@@ -280,7 +280,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&msc MOVE_Y(-10)', s: '&msc MOVE_Y(-20)'}
   - PG UP
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-up-bold$$
@@ -293,7 +293,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&msc MOVE_X(10)', s: '&msc MOVE_X(20)'}
   - PG DN
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -306,7 +306,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&msc MOVE_X(-10)', s: '&msc MOVE_X(-20)'}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - PLAY PAUSE
@@ -332,7 +332,7 @@ layers:
   - '&bt_win'
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&msc MOVE_Y(10)', s: '&msc MOVE_Y(20)'}
   - F6
   - F7
   - F8
@@ -345,7 +345,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&msc MOVE_Y(-10)', s: '&msc MOVE_Y(-20)'}
   - PgUp
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-up-bold$$
@@ -358,7 +358,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&msc MOVE_X(10)', s: '&msc MOVE_X(20)'}
   - PgDn
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -371,7 +371,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '&msc MOVE_X(-10)', s: '&msc MOVE_X(-20)'}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - PLAY PAUSE
