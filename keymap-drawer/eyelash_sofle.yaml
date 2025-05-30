@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   MAC:
-  - {t: '$$mdi:keyboard-esc$$', s: '`'}
+  - {t: '$$mdi:keyboard-esc$$', s: '~'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -66,7 +66,7 @@ layers:
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   WIN:
-  - {t: '$$mdi:keyboard-esc$$', s: '`'}
+  - {t: '$$mdi:keyboard-esc$$', s: '~'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
