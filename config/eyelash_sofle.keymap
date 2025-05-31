@@ -15,9 +15,8 @@
 
 &msc {
     acceleration-exponent = <0>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
-    delay-ms = <16>;                   // 0
-    trigger-period-ms = <1>;
+    time-to-max-speed-ms = <100>;       // 300                   // 0
+    trigger-period-ms = <16>;
 };
 
 &mmv {
@@ -582,11 +581,11 @@
 
         Layer-01 {
             bindings = <
-&kp F12  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &scroll_morph_up     &kp F6     &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
-&trans   &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &scroll_morph_down   &kp PG_UP  &trans      &kp UP            &trans      &trans   &kp DELETE
-&trans   &trans  &trans     &trans     &trans     &trans    &scroll_morph_left   &kp PG_DN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
-&trans   &trans  &trans     &trans     &trans     &trans    &scroll_morph_right  &trans     &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
-&kp F15  &trans  &trans     &trans     &trans     &trans    &mkp RCLK            &trans     &trans      &trans            &trans      &trans
+&kp F12  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &msc MOVE_Y(15)   &kp F6     &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
+&trans   &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &msc MOVE_Y(-15)  &kp PG_UP  &trans      &kp UP            &trans      &trans   &kp DELETE
+&trans   &trans  &trans     &trans     &trans     &trans    &msc MOVE_X(15)   &kp PG_DN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
+&trans   &trans  &trans     &trans     &trans     &trans    &msc MOVE_X(-15)  &trans     &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
+&kp F15  &trans  &trans     &trans     &trans     &trans    &mkp RCLK         &trans     &trans      &trans            &trans      &trans
             >;
 
             display-name = "L-1";
@@ -595,11 +594,11 @@
 
         Layer-02 {
             bindings = <
-&kp F12  &bt_mac       &bt BT_SEL 1  &bt_win    &bt BT_SEL 3  &bt BT_SEL 4    &scroll_morph_up     &kp F6         &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
-&trans   &out OUT_TOG  &mkp LCLK     &mkp MCLK  &mkp RCLK     &trans          &scroll_morph_down   &kp PAGE_UP    &trans      &kp UP            &trans      &trans   &kp DELETE
-&trans   &trans        &trans        &trans     &trans        &trans          &scroll_morph_left   &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
-&trans   &trans        &trans        &trans     &trans        &trans          &scroll_morph_right  &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
-&kp F15  &trans        &trans        &trans     &trans        &trans          &mkp RCLK            &trans         &trans      &trans            &trans      &trans
+&kp F12  &bt_mac       &bt BT_SEL 1  &bt_win    &bt BT_SEL 3  &bt BT_SEL 4    &msc MOVE_Y(15)   &kp F6         &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
+&trans   &out OUT_TOG  &mkp LCLK     &mkp MCLK  &mkp RCLK     &trans          &msc MOVE_Y(-15)  &kp PAGE_UP    &trans      &kp UP            &trans      &trans   &kp DELETE
+&trans   &trans        &trans        &trans     &trans        &trans          &msc MOVE_X(15)   &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
+&trans   &trans        &trans        &trans     &trans        &trans          &msc MOVE_X(-15)  &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
+&kp F15  &trans        &trans        &trans     &trans        &trans          &mkp RCLK         &trans         &trans      &trans            &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LA(C_VOLUME_UP)) LS(LA(C_VOLUME_DOWN))>;
