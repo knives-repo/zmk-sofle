@@ -267,7 +267,7 @@ layers:
   - F3
   - F4
   - F5
-  - {t: '&msc MOVE_Y(10)', s: '&msc MOVE_Y(20)'}
+  - '&msc MOVE_Y(15)'
   - F6
   - F7
   - F8
@@ -280,7 +280,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&msc MOVE_Y(-10)', s: '&msc MOVE_Y(-20)'}
+  - '&msc MOVE_Y(-15)'
   - PG UP
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-up-bold$$
@@ -293,7 +293,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&msc MOVE_X(10)', s: '&msc MOVE_X(20)'}
+  - '&msc MOVE_X(15)'
   - PG DN
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -306,7 +306,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&msc MOVE_X(-10)', s: '&msc MOVE_X(-20)'}
+  - '&msc MOVE_X(-15)'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - PLAY PAUSE
@@ -332,7 +332,7 @@ layers:
   - '&bt_win'
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '&msc MOVE_Y(10)', s: '&msc MOVE_Y(20)'}
+  - '&msc MOVE_Y(15)'
   - F6
   - F7
   - F8
@@ -345,7 +345,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&msc MOVE_Y(-10)', s: '&msc MOVE_Y(-20)'}
+  - '&msc MOVE_Y(-15)'
   - PgUp
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-up-bold$$
@@ -358,7 +358,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&msc MOVE_X(10)', s: '&msc MOVE_X(20)'}
+  - '&msc MOVE_X(15)'
   - PgDn
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -371,7 +371,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&msc MOVE_X(-10)', s: '&msc MOVE_X(-20)'}
+  - '&msc MOVE_X(-15)'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - PLAY PAUSE
