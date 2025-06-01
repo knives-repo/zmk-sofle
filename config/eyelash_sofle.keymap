@@ -339,7 +339,8 @@
             bindings = <&win_multi_layer_1>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
+            require-prior-idle-ms = <10>;
         };
 
         lt_hold_preferred: lt_hold_preferred {
@@ -348,7 +349,8 @@
             bindings = <&lt>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
+            require-prior-idle-ms = <10>;
         };
     };
 
