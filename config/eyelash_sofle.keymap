@@ -500,6 +500,24 @@
             wait-ms = <0>;
             tap-ms = <0>;
         };
+
+        win_minimise: win_minimise {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap_time 1>,
+                <&kp DOWN>,
+                <&macro_tap_time 1>,
+                <&kp DOWN>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "WIN_MINIMISE";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
     };
 
     combos {
@@ -601,11 +619,11 @@
 
         Layer-Win-01 {
             bindings = <
-&trans         &trans  &trans  &trans  &trans             &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-&trans         &trans  &trans  &trans  &trans             &trans    &trans  &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
-&trans         &trans  &trans  &trans  &trans             &trans    &trans  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
-&trans         &trans  &trans  &trans  &kp LC(LA(LG(V)))  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-&kp LC(LG(V))  &trans  &trans  &trans  &trans             &trans    &trans  &trans  &trans          &trans          &trans           &trans
+&trans         &trans  &trans      &trans  &trans             &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
+&trans         &trans  &kp LA(F4)  &trans  &trans             &trans    &trans  &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
+&trans         &trans  &trans      &trans  &trans             &trans    &trans  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
+&trans         &trans  &trans      &trans  &kp LC(LA(LG(V)))  &trans    &trans  &trans  &win_minimise   &trans          &trans           &trans  &trans
+&kp LC(LG(V))  &trans  &trans      &trans  &trans             &trans    &trans  &trans  &trans          &trans          &trans           &trans
             >;
 
             label = "L-W-1";
@@ -615,11 +633,11 @@
         Layer-Win-02 {
             label = "L-W-2";
             bindings = <
-&trans         &trans  &trans  &trans  &trans             &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-&trans         &trans  &trans  &trans  &trans             &trans    &trans  &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
-&trans         &trans  &trans  &trans  &trans             &trans    &trans  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
-&trans         &trans  &trans  &trans  &kp LC(LA(LG(V)))  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-&kp LC(LG(V))  &trans  &trans  &trans  &trans             &trans    &trans  &trans  &trans          &trans          &trans           &trans
+&trans         &trans  &trans      &trans  &trans             &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
+&trans         &trans  &kp LA(F4)  &trans  &trans             &trans    &trans  &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
+&trans         &trans  &trans      &trans  &trans             &trans    &trans  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
+&trans         &trans  &trans      &trans  &kp LC(LA(LG(V)))  &trans    &trans  &trans  &win_minimise   &trans          &trans           &trans  &trans
+&kp LC(LG(V))  &trans  &trans      &trans  &trans             &trans    &trans  &trans  &trans          &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
