@@ -633,11 +633,11 @@
 
         Layer-Win-01 {
             bindings = <
-&trans         &trans  &trans      &trans  &trans           &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-&trans         &trans  &kp LA(F4)  &trans  &trans           &trans    &trans  &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
-&trans         &trans  &trans      &trans  &trans           &trans    &trans  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
-&trans         &trans  &trans      &trans  &win_paste_text  &trans    &trans  &trans  &win_minimise   &trans          &trans           &trans  &trans
-&kp LC(LG(V))  &trans  &trans      &trans  &trans           &trans    &trans  &trans  &trans          &trans          &trans           &trans
+&trans         &trans  &trans      &trans  &trans           &trans    &trans            &trans  &trans          &trans          &trans           &trans  &trans
+&trans         &trans  &kp LA(F4)  &trans  &trans           &trans    &trans            &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
+&trans         &trans  &trans      &trans  &trans           &trans    &msc MOVE_X(-15)  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
+&trans         &trans  &trans      &trans  &win_paste_text  &trans    &msc MOVE_X(15)   &trans  &win_minimise   &trans          &trans           &trans  &trans
+&kp LC(LG(V))  &trans  &trans      &trans  &trans           &trans    &trans            &trans  &trans          &trans          &trans           &trans
             >;
 
             label = "L-W-1";
@@ -647,11 +647,11 @@
         Layer-Win-02 {
             label = "L-W-2";
             bindings = <
-&trans         &trans  &trans      &trans  &trans           &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-&trans         &trans  &kp LA(F4)  &trans  &trans           &trans    &trans  &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
-&trans         &trans  &trans      &trans  &trans           &trans    &trans  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
-&trans         &trans  &trans      &trans  &win_paste_text  &trans    &trans  &trans  &win_minimise   &trans          &trans           &trans  &trans
-&kp LC(LG(V))  &trans  &trans      &trans  &trans           &trans    &trans  &trans  &trans          &trans          &trans           &trans
+&trans         &trans  &trans      &trans  &trans           &trans    &trans            &trans  &trans          &trans          &trans           &trans  &trans
+&trans         &trans  &kp LA(F4)  &trans  &trans           &trans    &trans            &trans  &trans          &win_ctrl_up    &trans           &trans  &win_ctrl_del_forward
+&trans         &trans  &trans      &trans  &trans           &trans    &msc MOVE_X(-15)  &trans  &win_ctrl_left  &win_ctrl_down  &win_ctrl_right  &trans  &trans
+&trans         &trans  &trans      &trans  &win_paste_text  &trans    &msc MOVE_X(15)   &trans  &win_minimise   &trans          &trans           &trans  &trans
+&kp LC(LG(V))  &trans  &trans      &trans  &trans           &trans    &trans            &trans  &trans          &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
