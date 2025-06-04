@@ -423,7 +423,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&msc MOVE_X(-15)'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:arrow-left-bold$$', s: HOME}
   - {t: '$$mdi:arrow-down-bold$$', s: Ctl+END}
@@ -436,7 +436,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&win_paste_text'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&msc MOVE_X(15)'
   - {t: '$$mdi:transfer$$', type: trans}
   - '&win_minimise'
   - {t: '$$mdi:transfer$$', type: trans}
@@ -488,7 +488,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&msc MOVE_X(-15)'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:arrow-left-bold$$', s: HOME}
   - {t: '$$mdi:arrow-down-bold$$', s: Ctl+END}
@@ -501,7 +501,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&win_paste_text'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&msc MOVE_X(15)'
   - {t: '$$mdi:transfer$$', type: trans}
   - '&win_minimise'
   - {t: '$$mdi:transfer$$', type: trans}
