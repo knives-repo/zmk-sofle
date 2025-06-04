@@ -512,7 +512,7 @@
                 <&macro_tap_time 1>,
                 <&kp DOWN>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LEFT_GUI>;
 
             label = "WIN_MINIMISE";
             wait-ms = <0>;
