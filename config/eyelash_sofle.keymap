@@ -522,11 +522,14 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT &kp LEFT_CONTROL &kp LEFT_GUI>,
+                <&kp LEFT_CONTROL>,
+                <&macro_wait_time 1>,
+                <&macro_press>,
+                <&kp LG(LALT)>,
                 <&macro_tap>,
                 <&kp V>,
                 <&macro_release>,
-                <&kp LEFT_ALT &kp LEFT_CONTROL &kp LEFT_GUI>;
+                <&kp LEFT_CONTROL &kp LG(LEFT_ALT)>;
 
             label = "WIN_PASTE_TEXT";
             wait-ms = <0>;
