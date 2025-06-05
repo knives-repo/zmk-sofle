@@ -525,12 +525,12 @@
                 <&kp LA(LEFT_CONTROL)>,
                 <&macro_wait_time 8>,
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp LEFT_GUI>,
                 <&macro_wait_time 8>,
                 <&macro_tap>,
                 <&kp V>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL &kp LG(LEFT_ALT)>;
+                <&kp LA(LEFT_CONTROL) &kp LEFT_GUI>;
 
             label = "WIN_PASTE_TEXT";
             wait-ms = <0>;
