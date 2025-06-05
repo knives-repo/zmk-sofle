@@ -522,10 +522,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_CONTROL>,
+                <&kp LA(LEFT_CONTROL)>,
                 <&macro_wait_time 8>,
                 <&macro_press>,
-                <&kp LG(LALT)>,
+                <&kp LALT>,
+                <&macro_wait_time 8>,
                 <&macro_tap>,
                 <&kp V>,
                 <&macro_release>,
