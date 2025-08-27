@@ -55,8 +55,8 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <230>;
-            require-prior-idle-ms = <50>;
+            tapping-term-ms = <300>;
+            require-prior-idle-ms = <100>;
         };
 
         lt_enter: lt_enter {
