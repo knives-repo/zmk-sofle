@@ -444,17 +444,6 @@ win_smart_down_alt: win_smart_down_alt {
    keep-mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-// Updated spacebar behavior with improved settings
-mt_spacebar: mt_spacebar {
-   compatible = "zmk,behavior-hold-tap";
-   label = "MT_SPACEBAR";
-   bindings = <&kp>, <&kp>;
-   #binding-cells = <2>;
-   flavor = "tap-preferred";
-   tapping-term-ms = <300>;        // Increased from 230
-   require-prior-idle-ms = <100>;  // Increased from 50
-};
-
 /*
 USAGE INSTRUCTIONS:
 
