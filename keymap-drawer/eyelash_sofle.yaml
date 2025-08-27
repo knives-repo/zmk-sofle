@@ -92,7 +92,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', s: '&delete_line'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '&win_alt', s: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:apple-keyboard-control$$'}
   - A
   - S
   - D
@@ -413,7 +413,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-up-bold$$', s: Ctl+HOME}
+  - {t: '$$mdi:arrow-up-bold$$', s: 'Ctl+$$mdi:arrow-up-bold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backspace-reverse-outline$$', s: '&delete_forward_line'}
@@ -425,9 +425,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&msc MOVE_X(-15)'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-left-bold$$', s: HOME}
-  - {t: '$$mdi:arrow-down-bold$$', s: Ctl+END}
-  - {t: '$$mdi:arrow-right-bold$$', s: END}
+  - {t: '$$mdi:arrow-left-bold$$', s: 'Ctl+$$mdi:arrow-left-bold$$'}
+  - {t: '$$mdi:arrow-down-bold$$', s: 'Ctl+$$mdi:arrow-down-bold$$'}
+  - {t: '$$mdi:arrow-right-bold$$', s: 'Ctl+$$mdi:arrow-right-bold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -478,7 +478,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-up-bold$$', s: Ctl+HOME}
+  - {t: '$$mdi:arrow-up-bold$$', s: 'Ctl+$$mdi:arrow-up-bold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backspace-reverse-outline$$', s: '&delete_forward_line'}
@@ -490,9 +490,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&msc MOVE_X(-15)'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-left-bold$$', s: HOME}
-  - {t: '$$mdi:arrow-down-bold$$', s: Ctl+END}
-  - {t: '$$mdi:arrow-right-bold$$', s: END}
+  - {t: '$$mdi:arrow-left-bold$$', s: 'Ctl+$$mdi:arrow-left-bold$$'}
+  - {t: '$$mdi:arrow-down-bold$$', s: 'Ctl+$$mdi:arrow-down-bold$$'}
+  - {t: '$$mdi:arrow-right-bold$$', s: 'Ctl+$$mdi:arrow-right-bold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
