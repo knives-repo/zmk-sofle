@@ -362,6 +362,126 @@
             keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RGUI)>;
             mods = <(MOD_LCTL|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RGUI|MOD_LSFT)>;
         };
+// Specialized Alt behavior for Windows layer
+win_smart_alt: win_smart_alt {
+   compatible = "zmk,behavior-hold-tap";
+   label = "WIN_SMART_ALT";
+   bindings = <&kp>, <&kp>;
+   #binding-cells = <2>;
+   flavor = "tap-unless-interrupted";
+   tapping-term-ms = <200>;
+   require-prior-idle-ms = <150>;
+   hold-trigger-key-positions = <32 33 34 35>; // Arrow key positions - adjust based on your keymap
+   hold-trigger-on-release;
+};
+
+// Smart arrow key behaviors that work with both Alt and Shift
+win_smart_left: win_smart_left {
+   compatible = "zmk,behavior-mod-morph";
+   label = "WIN_SMART_LEFT";
+   bindings = <&kp LEFT>, <&win_smart_left_alt>;
+   #binding-cells = <0>;
+   mods = <(MOD_LALT)>;
+};
+
+win_smart_left_alt: win_smart_left_alt {
+   compatible = "zmk,behavior-mod-morph";
+   label = "WIN_SMART_LEFT_ALT";
+   bindings = <&kp LC(LEFT)>, <&kp LC(LS(LEFT))>;
+   #binding-cells = <0>;
+   mods = <(MOD_LSFT|MOD_RSFT)>;
+   keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+win_smart_right: win_smart_right {
+   compatible = "zmk,behavior-mod-morph";
+   label = "WIN_SMART_RIGHT";
+   bindings = <&kp RIGHT>, <&win_smart_right_alt>;
+   #binding-cells = <0>;
+   mods = <(MOD_LALT)>;
+};
+
+win_smart_right_alt: win_smart_right_alt {
+   compatible = "zmk,behavior-mod-morph";
+   label = "WIN_SMART_RIGHT_ALT";
+   bindings = <&kp LC(RIGHT)>, <&kp LC(LS(RIGHT))>;
+   #binding-cells = <0>;
+   mods = <(MOD_LSFT|MOD_RSFT)>;
+   keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+win_smart_up: win_smart_up {
+   compatible = "zmk,behavior-mod-morph";
+   label = "WIN_SMART_UP";
+   bindings = <&kp UP>, <&win_smart_up_alt>;
+   #binding-cells = <0>;
+   mods = <(MOD_LALT)>;
+};
+
+win_smart_up_alt: win_smart_up_alt {
+   compatible = "zmk,behavior-mod-morph";
+   label = "WIN_SMART_UP_ALT";
+   bindings = <&kp LC(UP)>, <&kp LC(LS(UP))>;
+   #binding-cells = <0>;
+   mods = <(MOD_LSFT|MOD_RSFT)>;
+   keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+win_smart_down: win_smart_down {
+   compatible = "zmk,behavior-mod-morph";
+   label = "WIN_SMART_DOWN";
+   bindings = <&kp DOWN>, <&win_smart_down_alt>;
+   #binding-cells = <0>;
+   mods = <(MOD_LALT)>;
+};
+
+win_smart_down_alt: win_smart_down_alt {
+   compatible = "zmk,behavior-mod-morph";
+   label = "WIN_SMART_DOWN_ALT";
+   bindings = <&kp LC(DOWN)>, <&kp LC(LS(DOWN))>;
+   #binding-cells = <0>;
+   mods = <(MOD_LSFT|MOD_RSFT)>;
+   keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// Updated spacebar behavior with improved settings
+mt_spacebar: mt_spacebar {
+   compatible = "zmk,behavior-hold-tap";
+   label = "MT_SPACEBAR";
+   bindings = <&kp>, <&kp>;
+   #binding-cells = <2>;
+   flavor = "tap-preferred";
+   tapping-term-ms = <300>;        // Increased from 230
+   require-prior-idle-ms = <100>;  // Increased from 50
+};
+
+/*
+USAGE INSTRUCTIONS:
+
+1. Add these behaviors to your behaviors section in your .keymap file
+
+2. In your Windows layer (layer 1), replace:
+  &win_alt_mod_morph
+  with:
+  &win_smart_alt LCTRL LALT
+
+3. In your navigation layers (layers 6 and 7), replace the arrow keys:
+  &win_ctrl_left   -> &win_smart_left
+  &win_ctrl_right  -> &win_smart_right
+  &win_ctrl_up     -> &win_smart_up
+  &win_ctrl_down   -> &win_smart_down
+
+4. Update hold-trigger-key-positions based on your actual arrow key positions:
+  - Count from 0, left to right, top to bottom
+  - Include the positions of your arrow keys in the navigation layer
+  - Current values (32 33 34 35) are placeholders
+
+HOW IT WORKS:
+- Tap Alt: Sends LALT for Microsoft app shortcuts
+- Hold Alt + Arrow: Sends Ctrl+Arrow for word navigation
+- Hold Alt + Shift + Arrow: Sends Ctrl+Shift+Arrow for text selection
+- The tap-unless-interrupted flavor prevents accidental Alt activation
+*/
     };
 
     macros {
