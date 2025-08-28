@@ -541,17 +541,20 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_wait_time 16>,
-                <&macro_press>,
-                <&kp LG(LALT)>,
-                <&macro_wait_time 16>,
-                <&macro_tap>,
-                <&kp V>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL &kp LG(LALT)>;
-
+               <&macro_tap>,
+               <&kp ESC>,                     // Clear any stuck states
+               <&macro_wait_time 100>,
+               <&macro_press>,
+               <&kp LGUI &kp LALT &kp LCTRL>,
+               <&macro_wait_time 150>,
+               <&macro_tap>,
+               <&kp V>,
+               <&macro_wait_time 150>,
+               <&macro_release>,
+               <&kp LGUI &kp LALT &kp LCTRL>,
+               <&macro_wait_time 100>,
+               <&macro_tap>,
+               <&kp ESC>;                     // Clear any remaining states
             label = "WIN_PASTE_FORMATLESS";
             wait-ms = <0>;
             tap-ms = <0>;
