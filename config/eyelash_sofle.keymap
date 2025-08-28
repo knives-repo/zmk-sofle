@@ -35,7 +35,7 @@
 
     behaviors {
 
-# Layer
+// Layer
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -82,7 +82,7 @@
             require-prior-idle-ms = <10>;
         };
 
-# Mod
+// Mod
 
         mt_spacebar: mt_spacebar {
             compatible = "zmk,behavior-hold-tap";
@@ -115,7 +115,7 @@
             tapping-term-ms = <50>;
         };
 
-# Grave Escape Morph
+// Grave Escape Morph
 
         grave_escape_tilde: grave_escape_tilde {
             compatible = "zmk,behavior-mod-morph";
@@ -137,8 +137,8 @@
             mods = <(MOD_LSFT)>;
         };
 
-# Windows
-    # Delete
+// Windows
+    // Delete
         win_ctrl_del: win_ctrl_del {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_CTRL_DEL";
@@ -175,7 +175,7 @@
             mods = <(MOD_LALT)>;
         };
 
-    # Spacebar
+    // Spacebar
         win_ctrl_spacebar: win_ctrl_spacebar {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_CTRL_SPACEBAR";
@@ -217,7 +217,7 @@
             mods = <(MOD_LALT)>;
         };
 
-    # Enter
+    // Enter
         lt_enter_win_l1: lt_enter_win_l1 {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_ENTER_WIN_L1";
@@ -239,7 +239,7 @@
             flavor = "balanced";
         };
 
-    # Brackets
+    // Brackets
         win_ctrl_leftbracket: win_ctrl_leftbracket {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_CTRL_LEFTBRACKET";
@@ -258,7 +258,7 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-    # Windows Special Alt Behavior
+    // Windows Special Alt Behavior
         win_smart_alt: win_smart_alt {
             compatible = "zmk,behavior-hold-tap";
             label = "WIN_SMART_ALT";
@@ -272,7 +272,7 @@
             hold-trigger-on-release;
         };
 
-        # Silent control modifier that doesn't send initial keypress
+        // Silent control modifier that doesn't send initial keypress
         silent_ctrl: silent_ctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -288,7 +288,7 @@
             tap-ms = <0>;
         };
 
-        # ALT + Direction Keys Behaviour
+        // ALT + Direction Keys Behaviour
         win_smart_left: win_smart_left {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_SMART_LEFT";
@@ -365,7 +365,7 @@
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-# Mouse Morph
+// Mouse Morph
         mouse_morph_left: mouse_morph_left {
             compatible = "zmk,behavior-mod-morph";
             label = "MOUSE_MORPH_LEFT";
