@@ -91,7 +91,7 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', s: '&delete_line'}
+  - {t: '$$mdi:backspace$$', s: 'Ctl+$$mdi:backspace$$'}
   - {t: '$$mdi:apple-keyboard-option$$', h: '&silent_ctrl LEFT_CONTROL'}
   - A
   - S
