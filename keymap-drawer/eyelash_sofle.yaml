@@ -91,7 +91,7 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', s: '&delete_line'}
+  - {t: '$$mdi:backspace$$', s: 'Ctl+$$mdi:backspace$$'}
   - {t: '$$mdi:apple-keyboard-option$$', h: '&silent_ctrl LEFT_CONTROL'}
   - A
   - S
@@ -416,7 +416,7 @@ layers:
   - {t: '$$mdi:arrow-up-bold$$', s: 'Ctl+$$mdi:arrow-up-bold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backspace$$', s: '&delete_forward_line'}
+  - {t: '$$mdi:backspace$$', s: 'Ctl+$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -481,7 +481,7 @@ layers:
   - {t: '$$mdi:arrow-up-bold$$', s: 'Ctl+$$mdi:arrow-up-bold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backspace$$', s: '&delete_forward_line'}
+  - {t: '$$mdi:backspace$$', s: 'Ctl+$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
