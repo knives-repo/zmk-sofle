@@ -34,6 +34,8 @@
     };
 
     behaviors {
+
+# Layer
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -46,17 +48,6 @@
             #binding-cells = <1>;
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
-        };
-
-        mt_spacebar: mt_spacebar {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_SPACEBAR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <300>;
-            require-prior-idle-ms = <100>;
         };
 
         lt_enter: lt_enter {
@@ -81,10 +72,33 @@
             flavor = "tap-preferred";
         };
 
-        lt_enter_win_l2: lt_enter_win_l2 {
+        lt_holdpreferred: lt_holdpreferred {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_ENTER_WIN_L2";
-            bindings = <&win_multi_layer_2>, <&kp>;
+            label = "LT_HOLDPREFERRED";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            require-prior-idle-ms = <10>;
+        };
+
+# Mod
+
+        mt_spacebar: mt_spacebar {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_SPACEBAR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            require-prior-idle-ms = <100>;
+        };
+
+        mt_balanced: mt_balanced {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_BALANCED";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -92,6 +106,39 @@
             flavor = "balanced";
         };
 
+        mt_holdpreferred: mt_holdpreferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_HOLDPREFERRED";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <50>;
+        };
+
+# Grave Escape Morph
+
+        grave_escape_tilde: grave_escape_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_ESCAPE_TILDE";
+            bindings = <&grave_escape_grave>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        grave_escape_grave: grave_escape_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_ESCAPE_GRAVE";
+            bindings = <&kp ESCAPE>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+# Windows
+    # Delete
         win_ctrl_del: win_ctrl_del {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_CTRL_DEL";
@@ -128,6 +175,7 @@
             mods = <(MOD_LALT)>;
         };
 
+    # Spacebar
         win_ctrl_spacebar: win_ctrl_spacebar {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_CTRL_SPACEBAR";
@@ -149,6 +197,49 @@
             require-prior-idle-ms = <0>;
         };
 
+        win_mt_spacebar_right: win_mt_spacebar_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "WIN_MT_SPACEBAR_RIGHT";
+            bindings = <&kp>, <&win_ctrl_spacebar>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            require-prior-idle-ms = <100>;
+        };
+
+        win_alt_spacebar: win_alt_spacebar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_ALT_SPACEBAR";
+            bindings = <&kp SPACE>, <&kp LC(SPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+    # Enter
+        lt_enter_win_l1: lt_enter_win_l1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_ENTER_WIN_L1";
+            bindings = <&win_multi_layer_1>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            require-prior-idle-ms = <10>;
+        };
+
+        lt_enter_win_l2: lt_enter_win_l2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_ENTER_WIN_L2";
+            bindings = <&win_multi_layer_2>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <25>;
+            flavor = "balanced";
+        };
+
+    # Brackets
         win_ctrl_leftbracket: win_ctrl_leftbracket {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_CTRL_LEFTBRACKET";
@@ -167,113 +258,7 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        mt_balanced: mt_balanced {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_BALANCED";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <25>;
-            flavor = "balanced";
-        };
-
-        win_alt_spacebar: win_alt_spacebar {
-            compatible = "zmk,behavior-mod-morph";
-            label = "WIN_ALT_SPACEBAR";
-            bindings = <&kp SPACE>, <&kp LC(SPACE)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        mt_holdpreferred: mt_holdpreferred {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_HOLDPREFERRED";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <50>;
-        };
-
-        grave_escape_tilde: grave_escape_tilde {
-            compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE_TILDE";
-            bindings = <&grave_escape_grave>, <&kp TILDE>;
-
-            #binding-cells = <0>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        grave_escape_grave: grave_escape_grave {
-            compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE_GRAVE";
-            bindings = <&kp ESCAPE>, <&kp GRAVE>;
-
-            #binding-cells = <0>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        mouse_morph_left: mouse_morph_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOUSE_MORPH_LEFT";
-            bindings = <&mmv MOVE_X(-200)>, <&mmv MOVE_X(-600)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mouse_morph_right: mouse_morph_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOUSE_MORPH_RIGHT";
-            bindings = <&mmv MOVE_X(200)>, <&mmv MOVE_X(600)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mouse_morph_down: mouse_morph_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOUSE_MORPH_DOWN";
-            bindings = <&mmv MOVE_Y(200)>, <&mmv MOVE_Y(600)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mouse_morph_up: mouse_morph_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOUSE_MORPH_UP";
-            bindings = <&mmv MOVE_Y(-200)>, <&mmv MOVE_Y(-600)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        lt_enter_win_l1: lt_enter_win_l1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_ENTER_WIN_L1";
-            bindings = <&win_multi_layer_1>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            require-prior-idle-ms = <10>;
-        };
-
-        lt_holdpreferred: lt_holdpreferred {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_HOLDPREFERRED";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            require-prior-idle-ms = <10>;
-        };
-
-        // Specialized Alt behavior for Windows layer
-
+    # Windows Special Alt Behavior
         win_smart_alt: win_smart_alt {
             compatible = "zmk,behavior-hold-tap";
             label = "WIN_SMART_ALT";
@@ -287,8 +272,7 @@
             hold-trigger-on-release;
         };
 
-        // Silent control modifier that doesn't send initial keypress
-
+        # Silent control modifier that doesn't send initial keypress
         silent_ctrl: silent_ctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -304,6 +288,7 @@
             tap-ms = <0>;
         };
 
+        # ALT + Direction Keys Behaviour
         win_smart_left: win_smart_left {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_SMART_LEFT";
@@ -380,15 +365,41 @@
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        win_mt_spacebar_right: win_mt_spacebar_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "WIN_MT_SPACEBAR_RIGHT";
-            bindings = <&kp>, <&win_ctrl_spacebar>;
+# Mouse Morph
+        mouse_morph_left: mouse_morph_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_MORPH_LEFT";
+            bindings = <&mmv MOVE_X(-200)>, <&mmv MOVE_X(-600)>;
 
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <300>;
-            require-prior-idle-ms = <100>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mouse_morph_right: mouse_morph_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_MORPH_RIGHT";
+            bindings = <&mmv MOVE_X(200)>, <&mmv MOVE_X(600)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mouse_morph_down: mouse_morph_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_MORPH_DOWN";
+            bindings = <&mmv MOVE_Y(200)>, <&mmv MOVE_Y(600)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mouse_morph_up: mouse_morph_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_MORPH_UP";
+            bindings = <&mmv MOVE_Y(-200)>, <&mmv MOVE_Y(-600)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
