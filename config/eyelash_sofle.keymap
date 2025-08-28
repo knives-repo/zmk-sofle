@@ -259,18 +259,17 @@
         win_smart_alt: win_smart_alt {
             compatible = "zmk,behavior-hold-tap";
             label = "WIN_SMART_ALT";
-            bindings = <&silent_ctrl>, <&kp>;
+            bindings = <&silent_alt>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>; // Arrow key positions - adjust based on your keymap
-            hold-while-undecided-linger;
-            hold-while-undecided;
+            require-prior-idle-ms = <150>;
         };
 
         // Silent control modifier that doesn't send initial keypress
 
-        silent_ctrl: silent_ctrl {
+        silent_alt: silent_ctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -278,7 +277,9 @@
                 <&kp LALT>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp K_CANCEL>;
 
             label = "SILENT_CTRL";
             wait-ms = <0>;
