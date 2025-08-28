@@ -133,7 +133,7 @@
         win_smart_del: win_smart_del {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_SMART_DEL";
-            bindings = <&kp BACKSPACE>, <&delete_line>;
+            bindings = <&kp BACKSPACE>, <&win_smart_del_with_mods>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LALT)>;
