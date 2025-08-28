@@ -416,7 +416,7 @@ layers:
   - {t: '$$mdi:arrow-up-bold$$', s: 'Ctl+$$mdi:arrow-up-bold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backspace-reverse-outline$$', s: '&delete_forward_line'}
+  - {t: '$$mdi:backspace$$', s: '&delete_forward_line'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -481,7 +481,7 @@ layers:
   - {t: '$$mdi:arrow-up-bold$$', s: 'Ctl+$$mdi:arrow-up-bold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backspace-reverse-outline$$', s: '&delete_forward_line'}
+  - {t: '$$mdi:backspace$$', s: '&delete_forward_line'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
