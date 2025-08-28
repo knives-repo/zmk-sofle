@@ -133,7 +133,7 @@
         win_ctrl_del: win_ctrl_del {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_CTRL_DEL";
-            bindings = <&win_alt_del>, <&delete_line>;
+            bindings = <&kp BACKSPACE>, <&delete_line>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -142,7 +142,7 @@
         win_ctrl_del_forward: win_ctrl_del_forward {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_CTRL_DEL_FORWARD";
-            bindings = <&win_alt_del_forward>, <&delete_forward_line>;
+            bindings = <&kp BACKSPACE>, <&delete_forward_line>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -151,7 +151,7 @@
         win_alt_del: win_alt_del {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_ALT_DEL";
-            bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
+            bindings = <&win_ctrl_del>, <&kp LC(BACKSPACE)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -160,7 +160,7 @@
         win_alt_del_forward: win_alt_del_forward {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_ALT_DEL_FORWARD";
-            bindings = <&kp DELETE>, <&kp LC(DELETE)>;
+            bindings = <&win_ctrl_del_forward>, <&kp LC(DELETE)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
