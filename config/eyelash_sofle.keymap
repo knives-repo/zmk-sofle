@@ -33,13 +33,19 @@
         tap-ms = <100>;
     };
 
+    / {
     behaviors {
+        /* Layer Toggles */
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
             display-name = "Toggle Layer On";
             toggle-mode = "on";
         };
+
+    };
+};
+
 
         tog_off: toggle_layer_off_only {
             compatible = "zmk,behavior-toggle-layer";
@@ -392,7 +398,9 @@
         };
     };
 
+    / {
     macros {
+        /* Macros */
         delete_line: delete_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -406,6 +414,9 @@
 
             label = "DELETE_LINE";
         };
+    };
+};
+
 
         bt_mac: bt_mac {
             compatible = "zmk,behavior-macro";
