@@ -92,7 +92,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', s: 'Ctl+$$mdi:backspace$$'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:minus-circle-outline$$'}
+  - $$mdi:apple-keyboard-option$$
   - A
   - S
   - D
