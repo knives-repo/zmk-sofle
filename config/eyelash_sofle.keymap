@@ -255,97 +255,8 @@
         };
 
         // Windows Special Alt Behavior
-
-        win_smart_alt: win_smart_alt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "WIN_SMART_ALT";
-            bindings = <&silent_alt>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>; // Arrow key positions - adjust based on your keymap
-            require-prior-idle-ms = <150>;
-        };
-
         // Silent control modifier that doesn't send initial keypress
         // ALT + Direction Keys Behaviour
-
-        win_smart_left: win_smart_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "WIN_SMART_LEFT";
-            bindings = <&kp LEFT>, <&win_smart_left_alt>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        win_smart_left_alt: win_smart_left_alt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "WIN_SMART_LEFT_ALT";
-            bindings = <&kp LC(LEFT)>, <&kp LC(LS(LEFT))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        win_smart_right: win_smart_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "WIN_SMART_RIGHT";
-            bindings = <&kp RIGHT>, <&win_smart_right_alt>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        win_smart_right_alt: win_smart_right_alt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "WIN_SMART_RIGHT_ALT";
-            bindings = <&kp LC(RIGHT)>, <&kp LC(LS(RIGHT))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        win_smart_up: win_smart_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "WIN_SMART_UP";
-            bindings = <&kp UP>, <&win_smart_up_alt>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        win_smart_up_alt: win_smart_up_alt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "WIN_SMART_UP_ALT";
-            bindings = <&kp LC(UP)>, <&kp LC(LS(UP))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        win_smart_down: win_smart_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "WIN_SMART_DOWN";
-            bindings = <&kp DOWN>, <&win_smart_down_alt>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        win_smart_down_alt: win_smart_down_alt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "WIN_SMART_DOWN_ALT";
-            bindings = <&kp LC(DOWN)>, <&kp LC(LS(DOWN))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         // Mouse Morph
 
         mouse_morph_left: mouse_morph_left {
@@ -639,7 +550,7 @@
         Layer-01 {
             bindings = <
 &kp F12  &kp F1        &kp F2     &kp F3     &kp F4     &kp F5    &msc MOVE_Y(15)   &kp F6     &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
-&trans   &out OUT_TOG  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &msc MOVE_Y(-15)  &kp PG_UP  &trans      &kp UP            &trans      &trans   &kp DELETE
+&trans   &out OUT_TOG  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &msc MOVE_Y(-15)  &kp PG_UP  &kp HOME    &kp UP            &kp END     &trans   &kp DELETE
 &trans   &trans        &trans     &trans     &trans     &trans    &msc MOVE_X(15)   &kp PG_DN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
 &trans   &trans        &trans     &trans     &trans     &trans    &msc MOVE_X(-15)  &trans     &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
 &kp F15  &trans        &trans     &trans     &trans     &trans    &mkp RCLK         &trans     &trans      &trans            &trans      &trans
@@ -652,7 +563,7 @@
         Layer-02 {
             bindings = <
 &kp F12  &kp F1        &kp F2     &kp F3     &kp F4     &kp F5    &msc MOVE_Y(15)   &kp F6         &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
-&trans   &out OUT_TOG  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &msc MOVE_Y(-15)  &kp PAGE_UP    &trans      &kp UP            &trans      &trans   &kp DELETE
+&trans   &out OUT_TOG  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &msc MOVE_Y(-15)  &kp PAGE_UP    &kp HOME    &kp UP            &kp END     &trans   &kp DELETE
 &trans   &trans        &trans     &trans     &trans     &trans    &msc MOVE_X(15)   &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
 &trans   &trans        &trans     &trans     &trans     &trans    &msc MOVE_X(-15)  &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
 &kp F15  &trans        &trans     &trans     &trans     &trans    &mkp RCLK         &trans         &trans      &trans            &trans      &trans
@@ -664,11 +575,11 @@
 
         Layer-Win-01 {
             bindings = <
-&trans         &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans           &trans           &trans            &trans  &trans
-&trans         &trans  &kp LA(F4)  &trans  &trans                 &trans    &trans            &trans  &trans           &win_smart_up    &trans            &trans  &win_smart_del_forward
-&trans         &trans  &trans      &trans  &trans                 &trans    &msc MOVE_X(-15)  &trans  &win_smart_left  &win_smart_down  &win_smart_right  &trans  &trans
-&trans         &trans  &trans      &trans  &win_paste_formatless  &trans    &msc MOVE_X(15)   &trans  &win_minimise    &trans           &trans            &trans  &trans
-&kp LC(LG(V))  &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans           &trans           &trans            &trans
+&trans         &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans  &trans
+&trans         &trans  &kp LA(F4)  &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans  &win_smart_del_forward
+&trans         &trans  &trans      &trans  &trans                 &trans    &msc MOVE_X(-15)  &trans  &trans         &trans  &trans  &trans  &trans
+&trans         &trans  &trans      &trans  &win_paste_formatless  &trans    &msc MOVE_X(15)   &trans  &win_minimise  &trans  &trans  &trans  &trans
+&kp LC(LG(V))  &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans
             >;
 
             label = "L-W-1";
@@ -678,11 +589,11 @@
         Layer-Win-02 {
             label = "L-W-2";
             bindings = <
-&trans         &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans           &trans           &trans            &trans  &trans
-&trans         &trans  &kp LA(F4)  &trans  &trans                 &trans    &trans            &trans  &trans           &win_smart_up    &trans            &trans  &win_smart_del_forward
-&trans         &trans  &trans      &trans  &trans                 &trans    &msc MOVE_X(-15)  &trans  &win_smart_left  &win_smart_down  &win_smart_right  &trans  &trans
-&trans         &trans  &trans      &trans  &win_paste_formatless  &trans    &msc MOVE_X(15)   &trans  &win_minimise    &trans           &trans            &trans  &trans
-&kp LC(LG(V))  &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans           &trans           &trans            &trans
+&trans         &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans  &trans
+&trans         &trans  &kp LA(F4)  &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans  &win_smart_del_forward
+&trans         &trans  &trans      &trans  &trans                 &trans    &msc MOVE_X(-15)  &trans  &trans         &trans  &trans  &trans  &trans
+&trans         &trans  &trans      &trans  &win_paste_formatless  &trans    &msc MOVE_X(15)   &trans  &win_minimise  &trans  &trans  &trans  &trans
+&kp LC(LG(V))  &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
