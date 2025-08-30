@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - '&numlock_tapdance'
   - SP
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:keyboard-return$$', h: L-1}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
   - '&mkp MB1'
@@ -121,7 +121,7 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-command$$
+  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-return$$', h: '&win_multi_layer_1'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-control$$', s: 'Alt+$$mdi:keyboard-space$$'}
   - {t: '$$mdi:transfer$$', type: trans}
