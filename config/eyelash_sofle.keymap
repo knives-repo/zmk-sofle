@@ -488,11 +488,11 @@
 
         MAC-00 {
             bindings = <
-&grave_escape_tilde                &kp N1             &kp N2  &kp N3     &kp N4                     &kp N5                                  &mouse_morph_up     &kp N6                            &kp N7             &kp N8     &kp N9            &kp N0             &kp MINUS
-&kp TAB                            &kp Q              &kp W   &kp E      &kp R                      &kp T                                   &mouse_morph_down   &kp Y                             &kp U              &kp I      &kp O             &kp P              &kp BACKSPACE
-&kp LEFT_ALT                       &kp A              &kp S   &kp D      &kp F                      &kp G                                   &mouse_morph_left   &kp H                             &kp J              &kp K      &kp L             &kp SEMI           &kp APOS
-&mt_holdpreferred LSHFT BACKSLASH  &kp Z              &kp X   &kp C      &kp V                      &kp B                                   &mouse_morph_right  &kp N                             &kp M              &kp COMMA  &kp DOT           &kp FSLH           &mt_balanced RIGHT_SHIFT EQUAL
-&kp C_MUTE                         &numlock_tapdance  &mo 3   &kp LCTRL  &lt_holdpreferred 4 ENTER  &mt_holdpreferred LEFT_COMMAND SPACE    &mkp MB1            &mt_spacebar RIGHT_COMMAND SPACE  &lt_enter 5 ENTER  &kp DEL    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&grave_escape_tilde                &kp N1             &kp N2  &kp N3                             &kp N4                     &kp N5                                  &mouse_morph_up     &kp N6                            &kp N7             &kp N8     &kp N9            &kp N0             &kp MINUS
+&kp TAB                            &kp Q              &kp W   &kp E                              &kp R                      &kp T                                   &mouse_morph_down   &kp Y                             &kp U              &kp I      &kp O             &kp P              &kp BACKSPACE
+&kp LEFT_ALT                       &kp A              &kp S   &kp D                              &kp F                      &kp G                                   &mouse_morph_left   &kp H                             &kp J              &kp K      &kp L             &kp SEMI           &kp APOS
+&mt_holdpreferred LSHFT BACKSLASH  &kp Z              &kp X   &kp C                              &kp V                      &kp B                                   &mouse_morph_right  &kp N                             &kp M              &kp COMMA  &kp DOT           &kp FSLH           &mt_balanced RIGHT_SHIFT EQUAL
+&kp C_MUTE                         &numlock_tapdance  &mo 3   &mt_holdpreferred LCTRL BACKSPACE  &lt_holdpreferred 4 ENTER  &mt_holdpreferred LEFT_COMMAND SPACE    &mkp MB1            &mt_spacebar RIGHT_COMMAND SPACE  &lt_enter 5 ENTER  &kp DEL    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -502,11 +502,11 @@
         WIN-00 {
             display-name = "WIN";
             bindings = <
-&grave_escape_tilde  &kp N1  &kp N2  &kp N3    &kp N4                    &kp N5                           &trans  &kp N6                          &kp N7                    &kp N8      &kp N9                 &kp N0                  &kp MINUS
-&kp TAB              &kp Q   &kp W   &kp E     &kp R                     &kp T                            &trans  &kp Y                           &kp U                     &kp I       &kp O                  &kp P                   &win_smart_del
-&kp LALT             &kp A   &kp S   &kp D     &kp F                     &kp G                            &trans  &kp H                           &kp J                     &kp K       &kp L                  &kp SEMI                &kp APOS
-&trans               &kp Z   &kp X   &kp C     &kp V                     &kp B                            &trans  &kp N                           &kp M                     &kp COMMA   &kp DOT                &trans                  &trans
-&kp C_MUTE           &trans  &trans  &kp LCMD  &lt_enter_win_l1 0 ENTER  &win_mt_spacebar_left LCTRL 0    &trans  &win_mt_spacebar_right RCTRL 0  &lt_enter_win_l2 6 ENTER  &kp DELETE  &win_ctrl_leftbracket  &win_ctrl_rightbracket
+&grave_escape_tilde  &kp N1  &kp N2  &kp N3                            &kp N4                    &kp N5                           &trans  &kp N6                          &kp N7                    &kp N8      &kp N9                 &kp N0                  &kp MINUS
+&kp TAB              &kp Q   &kp W   &kp E                             &kp R                     &kp T                            &trans  &kp Y                           &kp U                     &kp I       &kp O                  &kp P                   &win_smart_del
+&kp LALT             &kp A   &kp S   &kp D                             &kp F                     &kp G                            &trans  &kp H                           &kp J                     &kp K       &kp L                  &kp SEMI                &kp APOS
+&trans               &kp Z   &kp X   &kp C                             &kp V                     &kp B                            &trans  &kp N                           &kp M                     &kp COMMA   &kp DOT                &trans                  &trans
+&kp C_MUTE           &trans  &trans  &mt_holdpreferred LCMD BACKSPACE  &lt_enter_win_l1 0 ENTER  &win_mt_spacebar_left LCTRL 0    &trans  &win_mt_spacebar_right RCTRL 0  &lt_enter_win_l2 6 ENTER  &kp DELETE  &win_ctrl_leftbracket  &win_ctrl_rightbracket
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
