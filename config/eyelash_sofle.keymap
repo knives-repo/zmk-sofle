@@ -301,15 +301,6 @@
             #binding-cells = <0>;
             bindings = <&mo 9>, <&tog 9>;
         };
-
-        silent_alt: silent_alt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SILENT_ALT";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
     };
 
     macros {
@@ -549,11 +540,11 @@
 
         Layer-01 {
             bindings = <
-&kp F12  &kp F1        &kp F2     &kp F3     &kp F4     &kp F5    &msc MOVE_Y(15)   &kp F6     &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
-&trans   &out OUT_TOG  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &msc MOVE_Y(-15)  &kp PG_UP  &kp HOME    &kp UP            &kp END     &trans   &kp DELETE
-&trans   &trans        &trans     &trans     &trans     &trans    &msc MOVE_X(15)   &kp PG_DN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
-&trans   &trans        &trans     &trans     &trans     &trans    &msc MOVE_X(-15)  &trans     &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
-&kp F15  &trans        &trans     &trans     &trans     &trans    &mkp RCLK         &trans     &trans      &trans            &trans      &trans
+&kp F12  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &msc MOVE_Y(15)   &kp F6     &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
+&trans   &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &msc MOVE_Y(-15)  &kp PG_UP  &kp HOME    &kp UP            &kp END     &trans   &kp DELETE
+&trans   &trans  &trans     &trans     &trans     &trans    &msc MOVE_X(15)   &kp PG_DN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
+&trans   &trans  &trans     &trans     &trans     &trans    &msc MOVE_X(-15)  &trans     &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
+&kp F15  &trans  &trans     &trans     &trans     &trans    &mkp RCLK         &trans     &trans      &trans            &trans      &trans
             >;
 
             display-name = "L-1";
@@ -562,11 +553,11 @@
 
         Layer-02 {
             bindings = <
-&kp F12  &kp F1        &kp F2     &kp F3     &kp F4     &kp F5    &msc MOVE_Y(15)   &kp F6         &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
-&trans   &out OUT_TOG  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &msc MOVE_Y(-15)  &kp PAGE_UP    &kp HOME    &kp UP            &kp END     &trans   &kp DELETE
-&trans   &trans        &trans     &trans     &trans     &trans    &msc MOVE_X(15)   &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
-&trans   &trans        &trans     &trans     &trans     &trans    &msc MOVE_X(-15)  &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
-&kp F15  &trans        &trans     &trans     &trans     &trans    &mkp RCLK         &trans         &trans      &trans            &trans      &trans
+&kp F12  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &msc MOVE_Y(15)   &kp F6         &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
+&trans   &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &msc MOVE_Y(-15)  &kp PAGE_UP    &kp HOME    &kp UP            &kp END     &trans   &kp DELETE
+&trans   &trans  &trans     &trans     &trans     &trans    &msc MOVE_X(15)   &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
+&trans   &trans  &trans     &trans     &trans     &trans    &msc MOVE_X(-15)  &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
+&kp F15  &trans  &trans     &trans     &trans     &trans    &mkp RCLK         &trans         &trans      &trans            &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LA(C_VOLUME_UP)) LS(LA(C_VOLUME_DOWN))>;
@@ -601,11 +592,11 @@
 
         Layer-03 {
             bindings = <
-&tog 1  &bt_mac     &bt BT_SEL 1    &bt_win  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans     &trans  &trans  &trans  &trans  &tog 2
-&trans  &bt BT_CLR  &bt BT_CLR_ALL  &trans   &trans        &trans          &trans  &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans          &trans   &trans        &trans          &trans  &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans          &trans   &sys_reset    &bootloader     &trans  &soft_off  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans          &trans   &trans        &trans          &trans  &trans     &trans  &trans  &trans  &trans
+&tog 1        &bt_mac     &bt BT_SEL 1    &bt_win  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans     &trans  &trans  &trans  &trans  &tog 2
+&out OUT_TOG  &bt BT_CLR  &bt BT_CLR_ALL  &trans   &trans        &trans          &trans  &trans     &trans  &trans  &trans  &trans  &trans
+&trans        &trans      &trans          &trans   &trans        &trans          &trans  &trans     &trans  &trans  &trans  &trans  &trans
+&trans        &trans      &trans          &trans   &sys_reset    &bootloader     &trans  &soft_off  &trans  &trans  &trans  &trans  &trans
+&trans        &trans      &trans          &trans   &trans        &trans          &trans  &trans     &trans  &trans  &trans  &trans
             >;
 
             label = "L-3";
