@@ -282,9 +282,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&msc MOVE_Y(-15)'
   - PG UP
-  - {t: '$$mdi:transfer$$', type: trans}
+  - HOME
   - $$mdi:arrow-up-bold$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - END
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -347,9 +347,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&msc MOVE_Y(-15)'
   - PgUp
-  - {t: '$$mdi:transfer$$', type: trans}
+  - HOME
   - $$mdi:arrow-up-bold$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - END
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -413,7 +413,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-up-bold$$', s: 'Ctl+$$mdi:arrow-up-bold$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backspace$$', s: 'Ctl+$$mdi:backspace-reverse-outline$$'}
@@ -425,9 +425,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&msc MOVE_X(-15)'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-left-bold$$', s: 'Ctl+$$mdi:arrow-left-bold$$'}
-  - {t: '$$mdi:arrow-down-bold$$', s: 'Ctl+$$mdi:arrow-down-bold$$'}
-  - {t: '$$mdi:arrow-right-bold$$', s: 'Ctl+$$mdi:arrow-right-bold$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -478,7 +478,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-up-bold$$', s: 'Ctl+$$mdi:arrow-up-bold$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backspace$$', s: 'Ctl+$$mdi:backspace-reverse-outline$$'}
@@ -490,9 +490,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&msc MOVE_X(-15)'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-left-bold$$', s: 'Ctl+$$mdi:arrow-left-bold$$'}
-  - {t: '$$mdi:arrow-down-bold$$', s: 'Ctl+$$mdi:arrow-down-bold$$'}
-  - {t: '$$mdi:arrow-right-bold$$', s: 'Ctl+$$mdi:arrow-right-bold$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
