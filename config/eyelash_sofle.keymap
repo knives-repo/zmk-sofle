@@ -548,7 +548,7 @@
             >;
 
             display-name = "L-1";
-            sensor-bindings = <&inc_dec_kp LS(LA(C_VOLUME_UP)) LS(LA(C_VOLUME_DOWN))>;
+            sensor-bindings = <&inc_dec_kp LA(LC(LG(RIGHT))) LA(LC(LG(LEFT)))>;
         };
 
         Layer-02 {
@@ -560,7 +560,7 @@
 &kp F15  &trans  &trans     &trans     &trans     &trans    &mkp RCLK         &trans         &trans      &trans            &trans      &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LS(LA(C_VOLUME_UP)) LS(LA(C_VOLUME_DOWN))>;
+            sensor-bindings = <&inc_dec_kp LA(LC(LG(RIGHT))) LA(LC(LG(LEFT)))>;
             label = "L-2";
         };
 
