@@ -480,12 +480,18 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LG(UP_ARROW) &kp LG(UP_ARROW)>,
-                <&macro_wait_time 32>,
+                <&kp LG(UP_ARROW)>,
+                <&macro_wait_time 16>,
                 <&macro_tap>,
-                <&kp LG(LEFT_ARROW) &kp LG(LEFT_ARROW)>,
-                <&macro_wait_time 32>,
+                <&kp LG(UP_ARROW)>,
+                <&macro_wait_time 16>,
                 <&macro_tap>,
+                <&kp LG(LEFT_ARROW)>,
+                <&macro_wait_time 16>,
+                <&macro_tap>,
+                <&kp LG(LEFT_ARROW)>,
+                <&macro_tap>,
+                <&macro_wait_time 16>,
                 <&kp LG(UP_ARROW)>;
 
             label = "WIN_MOVE_WINDOW_DESKTOP_LEFT";
@@ -496,12 +502,18 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LG(UP_ARROW) &kp LG(UP_ARROW)>,
-                <&macro_wait_time 32>,
+                <&kp LG(UP_ARROW)>,
+                <&macro_wait_time 16>,
                 <&macro_tap>,
-                <&kp LG(RIGHT_ARROW) &kp LG(RIGHT_ARROW)>,
-                <&macro_wait_time 32>,
+                <&kp LG(UP_ARROW)>,
+                <&macro_wait_time 16>,
                 <&macro_tap>,
+                <&kp LG(RIGHT_ARROW)>,
+                <&macro_wait_time 16>,
+                <&macro_tap>,
+                <&kp LG(RIGHT_ARROW)>,
+                <&macro_tap>,
+                <&macro_wait_time 16>,
                 <&kp LG(UP_ARROW)>;
 
             label = "WIN_MOVE_WINDOW_DESKTOP_RIGHT";
@@ -615,7 +627,7 @@
             >;
 
             label = "L-W-1";
-            sensor-bindings = <&inc_dec_kp LA(TAB) LS(LA(TAB))>;
+            sensor-bindings = <&inc_dec_kp LC(TAB) LS(LC(TAB))>;
         };
 
         Layer-Win-02 {
