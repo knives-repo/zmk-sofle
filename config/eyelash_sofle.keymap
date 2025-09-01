@@ -615,7 +615,7 @@
             >;
 
             label = "L-W-1";
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp LA(TAB) LS(LA(TAB))>;
         };
 
         Layer-Win-02 {
@@ -628,7 +628,7 @@
 &kp LC(LG(V))  &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&scroll_encoder_win_desktop_move 0 0>;
         };
 
         Layer-03 {
