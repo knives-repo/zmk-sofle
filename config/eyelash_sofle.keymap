@@ -301,6 +301,15 @@
             #binding-cells = <0>;
             bindings = <&mo 9>, <&tog 9>;
         };
+
+        scroll_encoder_win_desktop_move: scroll_encoder_win_desktop_move {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "SCROLL_ENCODER_WIN_DESKTOP_MOVE";
+            #sensor-binding-cells = <2>;
+            bindings =
+                <&win_move_window_desktop_right>,
+                <&win_move_window_desktop_left>;
+        };
     };
 
     macros {
@@ -465,6 +474,38 @@
             wait-ms = <0>;
             tap-ms = <0>;
         };
+
+        win_move_window_desktop_left: win_move_window_desktop_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(UP_ARROW) &kp LG(UP_ARROW)>,
+                <&macro_wait_time 32>,
+                <&macro_tap>,
+                <&kp LG(LEFT_ARROW) &kp LG(LEFT_ARROW)>,
+                <&macro_wait_time 32>,
+                <&macro_tap>,
+                <&kp LG(UP_ARROW)>;
+
+            label = "WIN_MOVE_WINDOW_DESKTOP_LEFT";
+        };
+
+        win_move_window_desktop_right: win_move_window_desktop_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(UP_ARROW) &kp LG(UP_ARROW)>,
+                <&macro_wait_time 32>,
+                <&macro_tap>,
+                <&kp LG(RIGHT_ARROW) &kp LG(RIGHT_ARROW)>,
+                <&macro_wait_time 32>,
+                <&macro_tap>,
+                <&kp LG(UP_ARROW)>;
+
+            label = "WIN_MOVE_WINDOW_DESKTOP_RIGHT";
+        };
     };
 
     combos {
@@ -502,11 +543,11 @@
         WIN-00 {
             display-name = "WIN";
             bindings = <
-&grave_escape_tilde  &kp N1  &kp N2  &kp N3                            &kp N4                    &kp N5                           &trans  &kp N6                          &kp N7                    &kp N8      &kp N9                 &kp N0                  &kp MINUS
-&kp TAB              &kp Q   &kp W   &kp E                             &kp R                     &kp T                            &trans  &kp Y                           &kp U                     &kp I       &kp O                  &kp P                   &win_smart_del
-&kp LALT             &kp A   &kp S   &kp D                             &kp F                     &kp G                            &trans  &kp H                           &kp J                     &kp K       &kp L                  &kp SEMI                &kp APOS
-&trans               &kp Z   &kp X   &kp C                             &kp V                     &kp B                            &trans  &kp N                           &kp M                     &kp COMMA   &kp DOT                &trans                  &trans
-&kp C_MUTE           &trans  &trans  &mt_holdpreferred LCMD BACKSPACE  &lt_enter_win_l1 0 ENTER  &win_mt_spacebar_left LCTRL 0    &trans  &win_mt_spacebar_right RCTRL 0  &lt_enter_win_l2 6 ENTER  &kp DELETE  &win_ctrl_leftbracket  &win_ctrl_rightbracket
+&grave_escape_tilde  &kp N1  &kp N2  &kp N3                       &kp N4                    &kp N5                           &trans  &kp N6                          &kp N7                    &kp N8      &kp N9                 &kp N0                  &kp MINUS
+&kp TAB              &kp Q   &kp W   &kp E                        &kp R                     &kp T                            &trans  &kp Y                           &kp U                     &kp I       &kp O                  &kp P                   &win_smart_del
+&kp LALT             &kp A   &kp S   &kp D                        &kp F                     &kp G                            &trans  &kp H                           &kp J                     &kp K       &kp L                  &kp SEMI                &kp APOS
+&trans               &kp Z   &kp X   &kp C                        &kp V                     &kp B                            &trans  &kp N                           &kp M                     &kp COMMA   &kp DOT                &trans                  &trans
+&kp C_MUTE           &trans  &trans  &mt_balanced LCMD BACKSPACE  &lt_enter_win_l1 0 ENTER  &win_mt_spacebar_left LCTRL 0    &trans  &win_mt_spacebar_right RCTRL 0  &lt_enter_win_l2 6 ENTER  &kp DELETE  &win_ctrl_leftbracket  &win_ctrl_rightbracket
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
