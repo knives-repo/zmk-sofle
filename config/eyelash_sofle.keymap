@@ -1,5 +1,5 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 15
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
