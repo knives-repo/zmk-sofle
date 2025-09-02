@@ -518,6 +518,17 @@
 
             label = "WIN_MOVE_WINDOW_DESKTOP_RIGHT";
         };
+
+        win_ctrl_alt_del: win_ctrl_alt_del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LCTRL &kp LEFT_ALT &kp DELETE>,
+                <&macro_press>,
+                <&macro_press>;
+
+            label = "WIN_CTRL_ALT_DEL";
+        };
     };
 
     combos {
