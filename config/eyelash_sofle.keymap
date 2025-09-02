@@ -523,9 +523,17 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LCTRL &kp LEFT_ALT &kp DELETE>,
                 <&macro_press>,
-                <&macro_press>;
+                <&kp LCTRL>,
+                <&macro_wait_time 50>,
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_wait_time 50>,
+                <&macro_press>,
+                <&kp DEL>,
+                <&macro_wait_time 50>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT &kp DEL>;
 
             label = "WIN_CTRL_ALT_DEL";
         };
@@ -541,7 +549,7 @@
         };
 
         win_gui+ctrl+esc {
-            bindings = <&kp LC(LA(DEL))>;
+            bindings = <&win_ctrl_alt_del>;
             key-positions = <56 57 0>;
             layers = <1>;
         };
