@@ -655,5 +655,5 @@ combos:
   k: Gui+Alt+$$mdi:keyboard-esc$$
   l: [MAC]
 - p: [56, 57, 0]
-  k: Ctl+Alt+$$mdi:backspace-reverse-outline$$
+  k: '&win_ctrl_alt_del'
   l: [WIN]
