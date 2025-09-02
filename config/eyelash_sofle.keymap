@@ -632,7 +632,7 @@
 &kp F15  &trans  &trans  &trans     &trans     &trans    &mkp RCLK         &trans         &trans      &trans            &trans      &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LA(LC(LG(RIGHT))) LA(LC(LG(LEFT)))>;
+            sensor-bindings = <&scroll_encoder>;
             label = "L-2";
         };
 
