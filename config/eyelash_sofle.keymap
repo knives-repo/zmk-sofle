@@ -33,7 +33,33 @@
         tap-ms = <100>;
     };
 
+    encoder0: encoder_0 {
+        compatible = "zmk,encoder";
+        label = "Scroll Encoder";
+        a-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <4>;
+        bindings = <&hid_scroll_up>, <&hid_scroll_down>;
+    };
+
     behaviors {
+
+        hid_scroll_up: hid_scroll_up {
+            compatible = "zmk,behavior-hid-codes";
+            label = "HID Scroll Up";
+            #binding-cells = <0>;
+            bindings = <HID_USAGE(HID_USAGE_CONSUMER, HID_USAGE_CONSUMER_AC_PAN)>;
+            // Alternate binding (standard scroll):
+            // bindings = <HID_SCROLL_UP>;
+        };
+
+        hid_scroll_down: hid_scroll_down {
+            compatible = "zmk,behavior-hid-codes";
+            label = "HID Scroll Down";
+            #binding-cells = <0>;
+            bindings = <HID_SCROLL_DOWN>;
+        };
+
         // Layer
 
         tog_on: toggle_layer_on_only {
