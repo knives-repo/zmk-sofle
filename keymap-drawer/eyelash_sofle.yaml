@@ -563,7 +563,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&soft_off'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -651,8 +651,6 @@ layers:
   - {t: ',', s: <}
   - .
 combos:
-- p: [57, 55, 0]
-  k: '&soft_off'
 - p: [57, 56, 0]
   k: Gui+Alt+$$mdi:keyboard-esc$$
   l: [MAC]
