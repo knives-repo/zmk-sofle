@@ -25,8 +25,8 @@
 };
 
 / {
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,encoder";
+    left_encoder {
+        status = "okay";
         steps = <4>;
         bindings = <&hid_scroll_up>, <&hid_scroll_down>;
     };
