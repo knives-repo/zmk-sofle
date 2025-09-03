@@ -32,7 +32,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        tap-ms = <75>;
+        tap-ms = <100>;
     };
 
     behaviors {
@@ -551,11 +551,6 @@
     combos {
         compatible = "zmk,combos";
 
-        softoff {
-            bindings = <&soft_off>;
-            key-positions = <57 55 0>;
-        };
-
         mac_cmd-alt-esc {
             bindings = <&kp LG(LA(ESC))>;
             key-positions = <57 56 0>;
@@ -681,7 +676,7 @@
 &tog 1        &bt_mac     &bt BT_SEL 1    &bt_win    &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans  &tog 2
 &out OUT_TOG  &bt BT_CLR  &bt BT_CLR_ALL  &trans     &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans      &trans          &trans     &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans      &trans          &soft_off  &sys_reset    &bootloader     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans      &trans          &trans  &sys_reset    &bootloader     &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans      &trans          &trans     &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
