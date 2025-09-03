@@ -24,12 +24,15 @@
     acceleration-exponent = <0>;
 };
 
+&soft_off { hold-time-ms = <3000>; };
+
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-        tap-ms = <100>;
+
+        tap-ms = <75>;
     };
 
     behaviors {
@@ -540,6 +543,11 @@
 
     combos {
         compatible = "zmk,combos";
+        
+        softoff {
+            bindings = <&soft_off>;
+            key-positions = <14 28 40>;
+        };
 
         mac_cmd-alt-esc {
             bindings = <&kp LG(LA(ESC))>;
