@@ -312,6 +312,13 @@
                 <&win_move_window_desktop_right>,
                 <&win_move_window_desktop_left>;
         };
+
+        scroll_alt: scroll_alt {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL_ALT";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc MOVE_Y(-15)>, <&msc MOVE_Y(15)>;
+        };
     };
 
     macros {
@@ -639,7 +646,7 @@
 &kp F15  &trans  &trans  &trans     &trans     &trans    &mkp RCLK         &trans         &trans      &trans            &trans      &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_alt>;
             label = "L-2";
         };
 
@@ -666,7 +673,7 @@
 &kp LC(LG(V))  &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_alt>;
         };
 
         Layer-03 {
