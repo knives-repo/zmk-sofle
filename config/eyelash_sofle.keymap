@@ -16,11 +16,11 @@
 &msc {
     acceleration-exponent = <0>;      // 0
     time-to-max-speed-ms = <100>;       // 300                   // 0
-    trigger-period-ms = <16>;
+    trigger-period-ms = <4>;
 };
 
 &mmv {
-    trigger-period-ms = <16>;
+    trigger-period-ms = <4>;
     acceleration-exponent = <0>;
 };
 
