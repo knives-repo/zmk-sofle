@@ -651,6 +651,8 @@ layers:
   - {t: ',', s: <}
   - .
 combos:
+- p: [14, 28, 40]
+  k: '&soft_off'
 - p: [57, 56, 0]
   k: Gui+Alt+$$mdi:keyboard-esc$$
   l: [MAC]
