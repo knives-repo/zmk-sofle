@@ -671,11 +671,11 @@
 
         Layer-03 {
             bindings = <
-&tog 1        &bt_mac     &bt BT_SEL 1    &bt_win  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans  &tog 2
-&out OUT_TOG  &bt BT_CLR  &bt BT_CLR_ALL  &trans   &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans      &trans          &trans   &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans      &trans          &trans   &sys_reset    &bootloader     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans      &trans          &trans   &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&tog 1        &bt_mac     &bt BT_SEL 1    &bt_win    &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans  &tog 2
+&out OUT_TOG  &bt BT_CLR  &bt BT_CLR_ALL  &trans     &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans      &trans          &trans     &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans      &trans          &soft_off  &sys_reset    &bootloader     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans      &trans          &trans     &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "L-3";
