@@ -543,10 +543,10 @@
 
     combos {
         compatible = "zmk,combos";
-        
+
         softoff {
             bindings = <&soft_off>;
-            key-positions = <14 28 40>;
+            key-positions = <57 55 0>;
         };
 
         mac_cmd-alt-esc {
