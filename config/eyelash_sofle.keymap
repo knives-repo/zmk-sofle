@@ -641,7 +641,7 @@
 &kp F15  &trans  &trans  &trans     &trans     &trans    &mkp RCLK         &trans         &trans      &trans            &trans      &trans
             >;
 
-            sensor-bindings = <&scroll_alt>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             label = "L-2";
         };
 
@@ -668,16 +668,16 @@
 &kp LC(LG(V))  &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&scroll_alt>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
 
         Layer-03 {
             bindings = <
-&tog 1        &bt_mac     &bt BT_SEL 1    &bt_win    &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans  &tog 2
-&out OUT_TOG  &bt BT_CLR  &bt BT_CLR_ALL  &trans     &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans      &trans          &trans     &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans      &trans          &trans  &sys_reset    &bootloader     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans      &trans          &trans     &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&tog 1        &bt_mac     &bt BT_SEL 1    &bt_win  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans  &tog 2
+&out OUT_TOG  &bt BT_CLR  &bt BT_CLR_ALL  &trans   &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans      &trans          &trans   &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans      &trans          &trans   &sys_reset    &bootloader     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans      &trans          &trans   &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "L-3";
