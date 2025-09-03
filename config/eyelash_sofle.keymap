@@ -25,8 +25,9 @@
 };
 
 / {
-    left_encoder {
-        status = "okay";
+    scroll_encoder: scroll_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
         steps = <4>;
         bindings = <&hid_scroll_up>, <&hid_scroll_down>;
     };
