@@ -142,7 +142,7 @@
         win_smart_del_forward: win_smart_del_forward {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_SMART_DEL_FORWARD";
-            bindings = <&kp BACKSPACE>, <&win_smart_del_with_mods_forward>;
+            bindings = <&kp DELETE>, <&win_smart_del_with_mods_forward>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LALT)>;
@@ -255,6 +255,7 @@
         };
 
         // Mouse Morph
+
         mouse_morph_left: mouse_morph_left {
             compatible = "zmk,behavior-mod-morph";
             label = "MOUSE_MORPH_LEFT";
