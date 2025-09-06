@@ -24,8 +24,6 @@
     acceleration-exponent = <0>;
 };
 
-&soft_off { hold-time-ms = <3000>; };
-
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
