@@ -254,11 +254,7 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        // Windows Special Alt Behavior
-        // Silent control modifier that doesn't send initial keypress
-        // ALT + Direction Keys Behaviour
         // Mouse Morph
-
         mouse_morph_left: mouse_morph_left {
             compatible = "zmk,behavior-mod-morph";
             label = "MOUSE_MORPH_LEFT";
