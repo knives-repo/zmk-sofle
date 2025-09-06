@@ -142,7 +142,7 @@
         win_smart_del_forward: win_smart_del_forward {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_SMART_DEL_FORWARD";
-            bindings = <&kp DELETE>, <&win_smart_del_with_mods_forward>;
+            bindings = <&kp DEL>, <&win_smart_del_with_mods_forward>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LALT)>;
@@ -161,7 +161,7 @@
         win_smart_del_with_mods_forward: win_smart_del_with_mods_forward {
             compatible = "zmk,behavior-mod-morph";
             label = "WIN_SMART_DEL_WITH_MODS_FORWARD";
-            bindings = <&kp LC(DELETE)>, <&delete_forward_line>;
+            bindings = <&kp LC(DEL)>, <&delete_forward_line>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
