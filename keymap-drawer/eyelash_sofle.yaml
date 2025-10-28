@@ -201,10 +201,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&gbp_pound'
   - '&EUR_euro'
+  - '&section_sign'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&pilcrow_paragraph'
   - '&bullet_point'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
