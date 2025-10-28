@@ -667,7 +667,7 @@
         Layer-01 {
             bindings = <
 &kp F12  &kp F1  &kp F2  &kp F3     &kp F4     &kp F5    &msc MOVE_Y(15)   &kp F6     &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
-&trans   &trans  &trans  &trans     &trans     &trans    &msc MOVE_Y(-15)  &kp PG_UP  &kp HOME    &kp UP            &kp END     &trans   &kp DELETE
+&trans   &trans  &trans  &trans     &trans     &trans    &msc MOVE_Y(-15)  &kp PG_UP  &kp HOME    &kp UP            &kp END     &trans   &trans
 &trans   &trans  &trans  &mkp LCLK  &mkp RCLK  &trans    &msc MOVE_X(15)   &kp PG_DN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
 &trans   &trans  &trans  &trans     &trans     &trans    &msc MOVE_X(-15)  &trans     &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
 &kp F15  &trans  &trans  &trans     &trans     &trans    &mkp RCLK         &trans     &trans      &trans            &trans      &trans
@@ -680,7 +680,7 @@
         Layer-02 {
             bindings = <
 &kp F12  &kp F1  &kp F2  &kp F3     &kp F4     &kp F5    &msc MOVE_Y(15)   &kp F6         &kp F7      &kp F8            &kp F9      &kp F10  &kp F11
-&trans   &trans  &trans  &trans     &trans     &trans    &msc MOVE_Y(-15)  &kp PAGE_UP    &kp HOME    &kp UP            &kp END     &trans   &kp DELETE
+&trans   &trans  &trans  &trans     &trans     &trans    &msc MOVE_Y(-15)  &kp PAGE_UP    &kp HOME    &kp UP            &kp END     &trans   &trans
 &trans   &trans  &trans  &mkp LCLK  &mkp RCLK  &trans    &msc MOVE_X(15)   &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &trans   &trans
 &trans   &trans  &trans  &trans     &trans     &trans    &msc MOVE_X(-15)  &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
 &kp F15  &trans  &trans  &trans     &trans     &trans    &mkp RCLK         &trans         &trans      &trans            &trans      &trans
@@ -693,7 +693,7 @@
         Layer-Win-01 {
             bindings = <
 &trans         &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans  &trans
-&trans         &trans  &kp LA(F4)  &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans  &win_smart_del_forward
+&trans         &trans  &kp LA(F4)  &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans  &trans
 &trans         &trans  &trans      &trans  &trans                 &trans    &msc MOVE_X(-15)  &trans  &trans         &trans  &trans  &trans  &trans
 &trans         &trans  &trans      &trans  &win_paste_formatless  &trans    &msc MOVE_X(15)   &trans  &win_minimise  &trans  &trans  &trans  &trans
 &kp LC(LG(V))  &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans
@@ -707,7 +707,7 @@
             label = "L-W-2";
             bindings = <
 &trans         &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans  &trans
-&trans         &trans  &kp LA(F4)  &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans  &win_smart_del_forward
+&trans         &trans  &kp LA(F4)  &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans  &trans
 &trans         &trans  &trans      &trans  &trans                 &trans    &msc MOVE_X(-15)  &trans  &trans         &trans  &trans  &trans  &trans
 &trans         &trans  &trans      &trans  &win_paste_formatless  &trans    &msc MOVE_X(15)   &trans  &win_minimise  &trans  &trans  &trans  &trans
 &kp LC(LG(V))  &trans  &trans      &trans  &trans                 &trans    &trans            &trans  &trans         &trans  &trans  &trans
