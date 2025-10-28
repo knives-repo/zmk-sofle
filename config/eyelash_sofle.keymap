@@ -576,7 +576,7 @@
             tap-ms = <0>;
         };
 
-        section_sign: section_sign {
+        silcrow_section_sign: silcrow_section_sign {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -587,7 +587,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "SECTION_SIGN";
+            label = "SILCROW_SECTION_SIGN";
             wait-ms = <0>;
             tap-ms = <0>;
         };
@@ -653,11 +653,11 @@
 
         Special {
             bindings = <
-&trans  &trans  &trans  &gbp_pound  &EUR_euro  &section_sign    &trans  &trans  &pilcrow_paragraph  &bullet_point  &trans  &trans         &trans
-&trans  &trans  &trans  &trans      &trans     &trans           &trans  &trans  &trans              &trans         &trans  &trans         &trans
-&trans  &trans  &trans  &trans      &trans     &trans           &trans  &trans  &trans              &trans         &trans  &trans         &trans
-&trans  &trans  &trans  &trans      &trans     &trans           &trans  &trans  &trans              &trans         &trans  &kp BACKSLASH  &trans
-&trans  &trans  &trans  &trans      &trans     &trans           &trans  &trans  &trans              &trans         &trans  &trans
+&trans  &trans  &trans  &gbp_pound  &EUR_euro  &silcrow_section_sign    &trans  &trans  &pilcrow_paragraph  &bullet_point  &trans  &trans         &trans
+&trans  &trans  &trans  &trans      &trans     &trans                   &trans  &trans  &trans              &trans         &trans  &trans         &trans
+&trans  &trans  &trans  &trans      &trans     &trans                   &trans  &trans  &trans              &trans         &trans  &trans         &trans
+&trans  &trans  &trans  &trans      &trans     &trans                   &trans  &trans  &trans              &trans         &trans  &kp BACKSLASH  &trans
+&trans  &trans  &trans  &trans      &trans     &trans                   &trans  &trans  &trans              &trans         &trans  &trans
             >;
 
             label = "SP";
