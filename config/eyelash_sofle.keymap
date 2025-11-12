@@ -325,6 +325,15 @@
             tapping-term-ms = <300>;
             require-prior-idle-ms = <100>;
         };
+
+        en_em_dash_mod_morph: en_em_dash_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EN_EM_DASH_MOD_MORPH";
+            bindings = <&endash_shortcut>, <&emdash_shortcut>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -455,7 +464,11 @@
                 <&macro_press>,
                 <&kp LEFT_GUI>,
                 <&macro_tap>,
-                <&kp DOWN &kp DOWN &kp DOWN>,
+                <&kp DOWN>,
+                <&macro_wait_time 16>,
+                <&kp DOWN>,
+                <&macro_wait_time 16>,
+                <&kp DOWN>,
                 <&macro_release>,
                 <&kp LEFT_GUI>;
 
@@ -591,6 +604,38 @@
             wait-ms = <0>;
             tap-ms = <0>;
         };
+
+        endash_shortcut: ndash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "NDASH";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+
+        emdash_shortcut: emdash_shortcut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N1>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "EMDASH_SHORTCUT";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
     };
 
     combos {
@@ -653,7 +698,7 @@
 
         Special {
             bindings = <
-&trans  &trans  &trans  &gbp_pound  &EUR_euro  &silcrow_section_sign    &trans  &trans  &pilcrow_paragraph  &bullet_point  &trans  &trans         &trans
+&trans  &trans  &trans  &gbp_pound  &EUR_euro  &silcrow_section_sign    &trans  &trans  &pilcrow_paragraph  &bullet_point  &trans  &trans         &en_em_dash_mod_morph
 &trans  &trans  &trans  &trans      &trans     &trans                   &trans  &trans  &trans              &trans         &trans  &trans         &trans
 &trans  &trans  &trans  &trans      &trans     &trans                   &trans  &trans  &trans              &trans         &trans  &trans         &trans
 &trans  &trans  &trans  &trans      &trans     &trans                   &trans  &trans  &trans              &trans         &trans  &kp BACKSLASH  &trans
