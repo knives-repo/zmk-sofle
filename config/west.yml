@@ -16,10 +16,10 @@ manifest:
       revision: refactor
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3.0
+      revision: v0.4
       import: app/west.yml
     - name: nice-view-gem
       remote: m165437
-      revision: v0.3.0
+      revision: main
   self:
     path: config
