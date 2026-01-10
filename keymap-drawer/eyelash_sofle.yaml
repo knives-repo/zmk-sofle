@@ -307,10 +307,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&msc MOVE_X(-15)'
-  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
-  - PLAY PAUSE
+  - $$mdi:play-pause$$
   - $$mdi:skip-next$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - F15
@@ -372,10 +372,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&msc MOVE_X(-15)'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:skip-previous$$
-  - PLAY PAUSE
+  - PREVIOUS
+  - $$mdi:play-pause$$
   - $$mdi:skip-next$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - F15
