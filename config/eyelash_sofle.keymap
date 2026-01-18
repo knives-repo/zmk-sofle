@@ -719,7 +719,7 @@
             >;
 
             display-name = "L-1";
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         Layer-02 {
@@ -731,7 +731,7 @@
 &kp LA(LC(LG(RIGHT)))  &trans  &trans  &trans     &trans     &trans    &mkp RCLK         &trans          &trans    &trans      &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             label = "L-2";
         };
 
