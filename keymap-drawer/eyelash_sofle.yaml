@@ -28,7 +28,7 @@ layers:
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-option$$
-  - {t: A, h: NUM}
+  - A
   - S
   - D
   - F
@@ -41,7 +41,7 @@ layers:
   - {t: ;, h: MKP, s: ':'}
   - {t: '''', s: '"'}
   - {t: \, h: '$$mdi:apple-keyboard-shift$$', s: '|'}
-  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: Z, h: NUM}
   - X
   - C
   - V
@@ -115,7 +115,7 @@ layers:
   - N
   - M
   - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
@@ -613,7 +613,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - '4'
   - {t: '5', s: '%'}
   - '6'
@@ -626,7 +626,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - '1'
   - '2'
   - '3'
