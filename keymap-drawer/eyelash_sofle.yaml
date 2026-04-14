@@ -28,7 +28,7 @@ layers:
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-option$$
-  - A
+  - {t: A, h: NUM}
   - S
   - D
   - F
@@ -38,10 +38,10 @@ layers:
   - J
   - K
   - L
-  - {t: ;, s: ':'}
+  - {t: ;, h: NUM, s: ':'}
   - {t: '''', s: '"'}
   - {t: \, h: '$$mdi:apple-keyboard-shift$$', s: '|'}
-  - Z
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
   - X
   - C
   - V
@@ -51,8 +51,8 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
-  - {t: '=', h: '$$mdi:apple-keyboard-shift$$', s: +}
+  - {t: /, h: '$$mdi:apple-keyboard-shift$$', s: '?'}
+  - {t: '=', s: +}
   - $$mdi:volume-off$$
   - '&numlock_tapdance'
   - {t: '$$mdi:backspace-reverse-outline$$', h: SP}
@@ -93,7 +93,7 @@ layers:
   - P
   - {t: '$$mdi:backspace$$', s: 'Ctl+$$mdi:backspace$$'}
   - $$mdi:apple-keyboard-control$$
-  - A
+  - {t: '$$mdi:transfer$$', type: trans}
   - S
   - D
   - F
@@ -103,10 +103,10 @@ layers:
   - J
   - K
   - L
-  - {t: ;, s: ':'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Z
+  - {t: '$$mdi:transfer$$', type: trans}
   - X
   - C
   - V
@@ -601,31 +601,36 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '-', s: _}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '-', s: _}
   - KP 7
   - KP 8
   - KP 9
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP 7
-  - KP 8
-  - KP 9
-  - {t: '-', s: _}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - '4'
+  - {t: '5', s: '%'}
+  - '6'
+  - +
   - {t: '$$mdi:transfer$$', type: trans}
   - +
   - KP 4
   - KP 5
   - KP 6
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP 4
-  - KP 5
-  - KP 6
-  - +
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '=', s: +}
   - KP 1
@@ -633,23 +638,18 @@ layers:
   - KP 3
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP 1
-  - KP 2
-  - KP 3
-  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP 0
-  - {t: ',', s: <}
+  - .
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', s: )}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', s: )}
+  - {t: '$$mdi:transfer$$', type: trans}
   - .
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - KP 0
-  - {t: ',', s: <}
-  - .
   '10':
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
