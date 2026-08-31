@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 12
 
 #include <input/processors.dtsi>
@@ -9,19 +9,20 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+&mmv_input_listener { input-processors = <&zip_xy_scaler 4 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
     acceleration-exponent = <0>;      // 0
     time-to-max-speed-ms = <0>;       // 300                   // 0
-    trigger-period-ms = <8>;
+    trigger-period-ms = <4>;
 };
 
 &mmv {
-    trigger-period-ms = <8>;
-    acceleration-exponent = <0>;
+    trigger-period-ms = <4>;
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <300>;
 };
 
 / {
@@ -225,44 +226,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        // Mouse Morph
-
-        mouse_morph_left: mouse_morph_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOUSE_MORPH_LEFT";
-            bindings = <&mmv MOVE_X(-200)>, <&mmv MOVE_X(-600)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mouse_morph_right: mouse_morph_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOUSE_MORPH_RIGHT";
-            bindings = <&mmv MOVE_X(200)>, <&mmv MOVE_X(600)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mouse_morph_down: mouse_morph_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOUSE_MORPH_DOWN";
-            bindings = <&mmv MOVE_Y(200)>, <&mmv MOVE_Y(600)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mouse_morph_up: mouse_morph_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOUSE_MORPH_UP";
-            bindings = <&mmv MOVE_Y(-200)>, <&mmv MOVE_Y(-600)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         numlock_tapdance: numlock_tapdance {
@@ -563,10 +526,10 @@
         WIN_BASE {
             display-name = "WIN";
             bindings = <
-&grave_escape_tilde                &kp N1             &kp N2              &kp N3                       &kp N4                     &kp N5                           &mouse_morph_up     &kp N6                          &kp N7             &kp N8                             &kp N9                 &kp N0                          &kp MINUS
-&mt_spacebar LALT TAB              &kp Q              &kp W               &kp E                        &kp R                      &kp T                            &mouse_morph_down   &kp Y                           &kp U              &kp I                              &kp O                  &kp P                           &win_smart_del
-&kp RCTRL                          &kp A              &kp S               &kp D                        &kp F                      &kp G                            &mouse_morph_left   &kp H                           &kp J              &kp K                              &kp L                  &lt 7 SEMICOLON                 &kp APOS
-&mt_holdpreferred LSHFT BACKSLASH  &lt 6 Z            &kp X               &kp C                        &kp V                      &kp B                            &mouse_morph_right  &kp N                           &kp M              &kp COMMA                          &lt 6 PERIOD           &mt_balanced RIGHT_SHIFT SLASH  &kp EQUAL
+&grave_escape_tilde                &kp N1             &kp N2              &kp N3                       &kp N4                     &kp N5                           &mmv MOVE_UP        &kp N6                          &kp N7             &kp N8                             &kp N9                 &kp N0                          &kp MINUS
+&mt_spacebar LALT TAB              &kp Q              &kp W               &kp E                        &kp R                      &kp T                            &mmv MOVE_DOWN      &kp Y                           &kp U              &kp I                              &kp O                  &kp P                           &win_smart_del
+&kp RCTRL                          &kp A              &kp S               &kp D                        &kp F                      &kp G                            &mmv MOVE_LEFT      &kp H                           &kp J              &kp K                              &kp L                  &lt 7 SEMICOLON                 &kp APOS
+&mt_holdpreferred LSHFT BACKSLASH  &lt 6 Z            &kp X               &kp C                        &kp V                      &kp B                            &mmv MOVE_RIGHT     &kp N                           &kp M              &kp COMMA                          &lt 6 PERIOD           &mt_balanced RIGHT_SHIFT SLASH  &kp EQUAL
 &kp C_MUTE                         &numlock_tapdance  &lt_enter 2 DELETE  &mt_balanced LGUI BACKSPACE  &lt_holdpreferred 3 ENTER  &win_mt_spacebar_left LCTRL 0    &none               &win_mt_spacebar_right RCTRL 0  &lt_enter 4 ENTER  &win_smart_alt_del_forward RALT 0  &win_ctrl_leftbracket  &win_ctrl_rightbracket
             >;
 
@@ -654,11 +617,11 @@
         layer_10 {
             label = "MKP";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp LCLK  &mkp RCLK  &mo 8   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MCLK  &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_Y(-200)  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_Y(200)   &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_X(-200)  &trans  &mkp LCLK  &mkp RCLK  &mo 8   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_X(200)   &trans  &mkp MCLK  &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans             &trans  &trans     &trans     &trans  &trans
             >;
         };
 
