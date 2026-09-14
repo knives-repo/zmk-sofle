@@ -15,7 +15,7 @@
 
 &msc {
     acceleration-exponent = <0>;      // 0
-    time-to-max-speed-ms = <0>;       // 300                   // 0
+    time-to-max-speed-ms = <1>;       // 300                   // 0
     trigger-period-ms = <8>;
 };
 
