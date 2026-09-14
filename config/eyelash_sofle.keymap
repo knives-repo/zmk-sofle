@@ -533,7 +533,7 @@
 &kp C_MUTE                         &numlock_tapdance  &lt_enter 2 DELETE  &mt_balanced LGUI BACKSPACE  &lt_holdpreferred 3 ENTER  &win_mt_spacebar_left LCTRL 0    &none            &win_mt_spacebar_right RCTRL 0  &lt_enter 4 ENTER  &win_smart_alt_del_forward RALT 0  &win_ctrl_leftbracket  &win_ctrl_rightbracket
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         GAME {
